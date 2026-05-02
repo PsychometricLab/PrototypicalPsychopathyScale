@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Prototypical Psychopathy Scale</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2'/%3E%3Crect x='9' y='3' width='6' height='4' rx='1'/%3E%3C/svg%3E">
+
+<!-- Social Media Preview Meta Tags -->
+<meta name="description" content="Not your ordinary personality test.">
+
+<!-- Open Graph (Facebook, Messenger, Reddit, LinkedIn, Discord, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prototypical Psychopathy Scale — Psychopathy Assessment">
+<meta property="og:description" content="Not your ordinary personality test.">
+<!-- IMPORTANT: Replace YOUR-USERNAME and YOUR-REPO below with your actual GitHub Pages URL -->
+<meta property="og:url" content="https://PsychometricLab.github.io/PPS/">
+<meta property="og:image" content="https://PsychometricLab.github.io/PPS/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Prototypical Psychopathy Scale — Psychopathy Assessment">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prototypical Psychopathy Scale — Psychopathy Assessment">
+<meta name="twitter:description" content="Not your ordinary personality test.">
+<meta name="twitter:image" content="https://PsychometricLab.github.io/PPS/og-preview.png">
+<script>
+(function(){var v='v='+Math.floor(Date.now()/60000);if(location.search.indexOf(v)===-1){location.replace(location.pathname+'?'+v)}})();
+</script>
+<script>
+document.addEventListener('gesturestart',function(e){e.preventDefault()});
+document.addEventListener('gesturechange',function(e){e.preventDefault()});
+document.addEventListener('gestureend',function(e){e.preventDefault()});
+document.addEventListener('touchmove',function(e){if(e.touches.length>1)e.preventDefault()},{passive:false});
+var lastTap=0;document.addEventListener('touchend',function(e){var now=Date.now();if(now-lastTap<300){e.preventDefault()}lastTap=now},false);
+document.addEventListener('wheel',function(e){if(e.ctrlKey)e.preventDefault()},{passive:false});
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="Prototypical%20Personality%20Scale_files/css2.css" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#6456D4;--primary-dark:#5046C0;--primary-light:rgba(100,86,212,.2);--accent:#C9456A;--bg:#0C1220;--bg-card:#131929;--bg-card2:#17203A;--text:#E8E4F4;--text-muted:rgba(180,175,210,.75);--text-light:rgba(150,145,190,.55);--border:rgba(255,255,255,.1);--border-light:rgba(255,255,255,.06);--error:#F87171;--error-bg:rgba(248,113,113,.12);--sel-border:#A07830;--sel-text:#E8B860;--heading:'Fraunces',Georgia,serif;--body:'Source Sans 3',-apple-system,sans-serif;--radius:12px;--radius-lg:20px;--shadow-sm:0 1px 2px rgba(0,0,0,.3);--shadow:0 4px 24px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.06)}
+html{font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--body);color:var(--text);background:var(--bg);min-height:100vh;min-height:100svh;line-height:1.6;overflow-x:hidden;overflow-y:auto;overscroll-behavior:none;-webkit-overflow-scrolling:touch;touch-action:manipulation}
+body.on-results{overflow-x:hidden;overflow-y:auto;overscroll-behavior:auto;touch-action:manipulation}
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;background:#0C1220;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(91,77,199,.18) 0%,transparent 65%),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(91,77,199,.1) 0%,transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.018) 39px,rgba(255,255,255,.018) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.018) 39px,rgba(255,255,255,.018) 40px);pointer-events:none}
+.hero-rule{width:40px;height:2px;background:linear-gradient(90deg,transparent,rgba(165,148,255,.6),transparent);margin:0 auto 1.75rem;border-radius:2px}
+.hero-eyebrow{font-family:var(--body);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(165,148,255,.75);margin-bottom:1.4rem}
+.hero-badge{display:none}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero h1{font-family:var(--heading);font-size:min(5vw,2.2rem);font-weight:700;line-height:1.1;color:#F0EDF8;margin-bottom:1.25rem;white-space:nowrap;letter-spacing:-.02em}
+.hero-divider{width:56px;height:1px;background:linear-gradient(90deg,transparent,rgba(165,148,255,.5),transparent);margin:0 auto 1.5rem;border-radius:1px}
+.hero-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:1.4rem 2rem 1.5rem;max-width:460px;width:100%;backdrop-filter:blur(10px);box-shadow:0 4px 32px rgba(0,0,0,.25),0 0 0 1px rgba(255,255,255,.04),0 0 60px rgba(100,86,212,.07);margin-bottom:.25rem}
+.hero-sub{font-family:'DM Sans',sans-serif;font-size:1rem;color:rgba(210,205,235,.95);max-width:420px;line-height:1.7;font-weight:400;margin-bottom:.5rem}
+.hero-sub:last-child{margin-bottom:0}
+.hero-meta{display:flex;align-items:center;gap:0;margin:2.25rem 0 2.75rem;font-size:.82rem;color:rgba(185,180,215,.88);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.5rem .25rem;background:rgba(255,255,255,.03);backdrop-filter:blur(4px)}
+.hero-meta-item{display:flex;align-items:center;gap:6px;padding:.1rem 1.1rem}
+.hero-meta-item+.hero-meta-item{border-left:1px solid rgba(255,255,255,.08)}
+.hero-meta-item svg{width:14px;height:14px;color:rgba(165,148,255,.7);flex-shrink:0}
+.btn-hero{font-family:var(--body);font-size:.95rem;font-weight:600;letter-spacing:.04em;padding:.95rem 2.8rem;border-radius:100px;border:none;cursor:pointer;color:#fff;background:linear-gradient(135deg,#6456D4 0%,#5046C0 100%);box-shadow:0 0 0 1px rgba(100,86,212,.4),0 4px 20px rgba(91,77,199,.45),0 1px 3px rgba(0,0,0,.4);transition:all .2s ease;position:relative;overflow:hidden}
+.btn-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.1) 0%,transparent 60%);border-radius:inherit}
+.btn-hero:hover{background:linear-gradient(135deg,#7063DC 0%,#5B50CC 100%);box-shadow:0 0 0 1px rgba(112,99,220,.5),0 6px 28px rgba(91,77,199,.55),0 1px 3px rgba(0,0,0,.4);transform:translateY(-1px)}
+.btn-hero:active{transform:translateY(0)}
+.explainer{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;background:var(--bg);position:relative}
+.explainer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(100,86,212,.12) 0%,transparent 60%);pointer-events:none}
+.explainer-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem 2rem;max-width:540px;width:100%;box-shadow:var(--shadow);animation:fadeIn .5s ease;position:relative;z-index:1}
+.btn-explainer-back{display:block;margin:1.25rem auto 0;background:transparent;border:none;color:var(--text-light);font-family:var(--body);font-size:.85rem;cursor:pointer;padding:.4rem .8rem;opacity:.7;transition:opacity .15s ease;position:relative;z-index:1}
+.btn-explainer-back:hover{opacity:1;color:var(--primary)}
+.explainer h2{font-family:var(--heading);font-size:1.6rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
+.explainer-sub{font-family:'DM Sans',sans-serif;font-size:1rem;color:rgba(200,196,230,.92);font-weight:400;line-height:1.65;margin-bottom:2rem}
+.explainer-label{font-family:var(--heading);font-size:1rem;font-weight:600;color:var(--text-muted);margin-bottom:1.25rem;font-style:italic}
+.explainer-demo{margin-bottom:2rem}
+.tri-container{position:relative;padding:0 .5rem}
+.tri-numbers{display:flex;justify-content:space-between;margin-bottom:.6rem;position:relative;z-index:2}
+.tri-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.9rem;color:var(--text-muted);background:rgba(255,255,255,.06);border:2px solid var(--border);opacity:0;animation:numIn .35s ease forwards}
+.tri-num:nth-child(1){animation-delay:.3s}.tri-num:nth-child(2){animation-delay:.45s}.tri-num:nth-child(3){animation-delay:.6s}.tri-num:nth-child(4){animation-delay:.75s}.tri-num:nth-child(5){animation-delay:.9s}
+@keyframes numIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.tri-shape{position:relative;height:28px;margin:0 18px;overflow:hidden;opacity:0;animation:triGrow .8s ease 1.15s forwards}
+@keyframes triGrow{from{opacity:0;clip-path:polygon(0% 100%,0% 100%,0% 100%)}to{opacity:1;clip-path:polygon(0% 100%,100% 100%,100% 0%)}}
+.tri-shape-inner{width:100%;height:100%;background:linear-gradient(90deg,rgba(100,86,212,.25),rgba(100,86,212,.7));border-radius:0 4px 4px 0;clip-path:polygon(0% 100%,100% 100%,100% 0%)}
+.tri-labels{display:flex;margin-top:.6rem}
+.tri-label-l,.tri-label-m,.tri-label-r{font-size:.75rem;font-weight:500;color:var(--text-light);opacity:0;animation:numIn .35s ease 1.35s forwards;flex:1}
+.tri-label-l{text-align:left}
+.tri-label-m{text-align:center}
+.tri-label-r{text-align:right;color:var(--primary);font-weight:600}
+.explainer-note{font-size:.88rem;color:var(--text-muted);line-height:1.6;margin-bottom:2rem;opacity:0;animation:numIn .4s ease 1.55s forwards}
+.explainer-note strong{color:var(--text);font-weight:600}
+.survey-shell{max-width:700px;margin:0 auto;padding:0 1.5rem 0;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;background:var(--bg)}
+.progress-container{padding:1.25rem 0 .75rem;flex-shrink:0;border-bottom:1px solid var(--border-light)}
+.progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.progress-title{font-family:var(--heading);font-size:1.1rem;font-weight:700;color:var(--text);letter-spacing:-.02em;text-transform:none}
+.progress-pct{font-size:.78rem;font-weight:600;color:rgba(165,148,255,.8);letter-spacing:.04em}
+.progress-track{height:4px;background:rgba(255,255,255,.08);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#6456D4,#9B6EDB);border-radius:100px;transition:width .6s cubic-bezier(.25,.46,.45,.94)}
+.extent-header{font-family:var(--body);font-size:1.6rem;font-weight:600;text-align:center;color:var(--text);margin:0 0 .15rem;flex-shrink:0}
+.extent-header.hidden{display:none}
+.extent-header.first-load{opacity:0;animation:fadeIn .4s ease .5s forwards}
+.slide-area{flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:15%}
+.content-anchor{position:relative}
+.text-section{position:absolute;bottom:100%;left:0;right:0;padding-bottom:.5rem}
+.scale-section{}
+.question-slide{overflow:hidden}
+.question-slide.first-load{opacity:0;animation:fadeIn .4s ease 1s forwards}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInRight{from{transform:translateX(80px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes slideInLeft{from{transform:translateX(-80px);opacity:0}to{transform:translateX(0);opacity:1}}
+.slide-fwd{animation:slideInRight .25s ease}
+.slide-bwd{animation:slideInLeft .25s ease}
+.item-question{font-family:var(--body);font-size:1.1rem;font-weight:500;line-height:1.5;color:var(--text);text-align:center;margin-bottom:.75rem;text-wrap:balance}
+.item-question-special{font-family:var(--body);font-size:.95rem;font-weight:400;line-height:1.5;color:var(--text-muted);text-align:center;margin-bottom:.35rem;font-style:italic;text-wrap:balance}
+.item-question-special-main{font-family:var(--body);font-size:1.1rem;font-weight:500;line-height:1.5;color:var(--text);text-align:center;margin-bottom:.75rem;text-wrap:balance}
+.scale-wrap{display:flex;flex-direction:column;gap:6px;max-width:400px;margin:0 auto;width:100%}
+.scale-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.7rem 1.25rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-card);cursor:pointer;transition:border-color .15s,background .15s;-webkit-tap-highlight-color:transparent;user-select:none;position:relative;overflow:hidden;z-index:0}
+.scale-btn::before{content:'';position:absolute;top:0;left:0;height:100%;width:0;z-index:-1;border-radius:inherit;transition:width .4s cubic-bezier(.25,.46,.45,.94)}
+.scale-btn[data-value="0"]::before{background:rgba(100,86,212,.15)}
+.scale-btn[data-value="1"]::before{background:linear-gradient(90deg,rgba(100,86,212,.1),rgba(100,86,212,.25))}
+.scale-btn[data-value="2"]::before{background:linear-gradient(90deg,rgba(100,86,212,.1),rgba(100,86,212,.35))}
+.scale-btn[data-value="3"]::before{background:linear-gradient(90deg,rgba(100,86,212,.1),rgba(100,86,212,.45))}
+.scale-btn[data-value="4"]::before{background:linear-gradient(90deg,rgba(100,86,212,.1),rgba(100,86,212,.55))}
+@media (hover:hover){.scale-btn:hover{border-color:rgba(165,148,255,.4);background:rgba(255,255,255,.04)}}
+.scale-btn.selected{border-color:rgba(224,184,96,.5);background:var(--bg-card)}
+.scale-btn.selected[data-value="0"]::before{width:2%}
+.scale-btn.selected[data-value="1"]::before{width:25%}
+.scale-btn.selected[data-value="2"]::before{width:50%}
+.scale-btn.selected[data-value="3"]::before{width:75%}
+.scale-btn.selected[data-value="4"]::before{width:100%}
+.scale-num{font-weight:600;font-size:.95rem;color:var(--text);transition:color .15s}
+.scale-lbl{font-size:.95rem;font-weight:400;color:var(--text-muted);line-height:1.3;transition:color .15s}
+.scale-btn.selected .scale-num{color:#E8C870}
+.scale-btn.selected .scale-lbl{color:#C8A850}
+.nav-row{display:flex;justify-content:space-between;align-items:center;padding:1rem 0 1.5rem;flex-shrink:0;gap:1rem;border-top:1px solid var(--border-light)}
+.btn-nav{font-family:var(--body);font-size:.92rem;font-weight:600;padding:.8rem 2rem;border-radius:100px;cursor:pointer;border:none;transition:all .15s ease}
+.btn-next{background:linear-gradient(135deg,#6456D4 0%,#5046C0 100%);color:#fff;box-shadow:0 0 0 1px rgba(100,86,212,.4),0 2px 12px rgba(91,77,199,.4)}
+.btn-next:hover{background:linear-gradient(135deg,#7063DC 0%,#5B50CC 100%);transform:translateY(-1px);box-shadow:0 0 0 1px rgba(112,99,220,.5),0 4px 18px rgba(91,77,199,.5)}.btn-next:active{transform:translateY(0)}
+.btn-back{background:transparent;color:var(--text-muted);border:1px solid var(--border)}
+.btn-back:hover{background:rgba(255,255,255,.05);color:var(--text);border-color:rgba(255,255,255,.2)}
+.error-msg{background:var(--error-bg);color:var(--error);padding:.65rem 1rem;border-radius:var(--radius);font-size:.82rem;font-weight:500;margin-bottom:.5rem;display:none;border:1px solid rgba(248,113,113,.2);text-align:center}
+.error-msg.visible{display:block}
+.results{max-width:640px;margin:0 auto;padding:2.5rem 1.5rem 4rem;animation:fadeIn .5s ease}
+.results h1{font-family:var(--heading);font-size:2rem;font-weight:700;text-align:center;margin-bottom:.5rem;color:var(--text)}
+.results-sub{text-align:center;font-size:1rem;color:var(--text-muted);font-weight:300;margin-bottom:2.5rem;line-height:1.6}
+.dim-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 1.75rem;margin-bottom:.85rem;box-shadow:var(--shadow-sm)}
+.dim-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.dim-name{font-family:var(--heading);font-size:1.05rem;font-weight:600}
+.dim-pct{font-size:1.05rem;font-weight:700;color:var(--primary)}
+.dim-desc{font-size:.78rem;color:var(--text-muted);line-height:1.5;margin-bottom:.85rem}
+.dim-bar-track{height:6px;background:rgba(255,255,255,.07);border-radius:100px;overflow:hidden}
+.dim-bar-fill{height:100%;border-radius:100px;transition:width 1.2s cubic-bezier(.25,.46,.45,.94)}
+.dim-bar-fd{background:linear-gradient(90deg,#5B4DC7,#7B6FE0)}
+.dim-bar-im{background:linear-gradient(90deg,#E8567F,#F08BA5)}
+.dim-bar-cr{background:linear-gradient(90deg,#8B5CF6,#A78BFA)}
+.dim-bar-iss{background:linear-gradient(90deg,#D97B2B,#F0A854)}
+.dim-bar-iu{background:linear-gradient(90deg,#0EA5E9,#67D4F8)}
+.dim-bar-as{background:linear-gradient(90deg,#DC2626,#F87171)}
+.submitting-overlay{display:none;position:fixed;inset:0;background:rgba(12,18,32,.92);backdrop-filter:blur(8px);z-index:1000;align-items:center;justify-content:center;flex-direction:column}
+.submitting-overlay.visible{display:flex}
+.spinner{width:40px;height:40px;border:2px solid rgba(255,255,255,.1);border-top-color:rgba(165,148,255,.8);border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinner-text{margin-top:1rem;color:var(--text-muted);font-size:.9rem;font-weight:400;letter-spacing:.04em}
+@media(max-width:640px){
+  .hero{padding:1.5rem 1.25rem}
+  .hero h1{white-space:nowrap}.hero-sub{font-size:1rem}
+  .hero-eyebrow{font-size:.68rem;margin-bottom:1.2rem}
+  .hero-rule{margin-bottom:1.2rem}
+  .hero-meta{flex-direction:column;gap:0;border-radius:16px;padding:.25rem 0;margin:1.75rem 0 2.25rem}
+  .hero-meta-item{padding:.5rem 1.25rem;width:100%;justify-content:center}
+  .hero-meta-item+.hero-meta-item{border-left:none;border-top:1px solid rgba(255,255,255,.08)}
+  .btn-hero{padding:.9rem 2.2rem;font-size:.95rem;width:100%;max-width:320px}
+  .survey-shell{padding:0 .75rem 0}
+  .extent-header{font-size:1.4rem}
+  .item-question{font-size:1.05rem}
+  .scale-btn{padding:.6rem 1rem}
+  .scale-num{font-size:.88rem}.scale-lbl{font-size:.88rem}
+  .btn-nav{padding:.7rem 1.5rem;font-size:.85rem}
+  .explainer{padding:1.5rem 1.25rem}
+  .explainer-card{padding:1.75rem 1.25rem}
+  .tri-num{width:30px;height:30px;font-size:.78rem}
+  .results{padding:1.5rem 1rem 3rem}
+  .results h1{font-size:1.6rem}
+  .dim-card{padding:1.1rem .9rem}.dim-name{font-size:.95rem}
+}
+@media(max-width:380px){
+  .hero h1{font-size:1.6rem}
+  .extent-header{font-size:1.2rem}
+  .item-question{font-size:.95rem}
+  .scale-btn{padding:.5rem .75rem}
+  .scale-lbl{font-size:.82rem}
+  .tri-num{width:26px;height:26px;font-size:.72rem}
+}
+
+/* Likert colors */
+.likert .scale-btn::before{display:none}
+.likert .scale-btn.selected[data-value="0"]{border-color:rgba(248,113,113,.5);background:rgba(220,38,38,.12)}
+.likert .scale-btn.selected[data-value="0"] .scale-num,.likert .scale-btn.selected[data-value="0"] .scale-lbl{color:#F87171}
+.likert .scale-btn.selected[data-value="1"]{border-color:rgba(232,92,92,.4);background:rgba(232,92,92,.1)}
+.likert .scale-btn.selected[data-value="1"] .scale-num,.likert .scale-btn.selected[data-value="1"] .scale-lbl{color:#F08080}
+.likert .scale-btn.selected[data-value="2"]{border-color:rgba(240,144,48,.4);background:rgba(240,144,48,.1)}
+.likert .scale-btn.selected[data-value="2"] .scale-num,.likert .scale-btn.selected[data-value="2"] .scale-lbl{color:#F0A858}
+.likert .scale-btn.selected[data-value="3"]{border-color:rgba(107,191,107,.4);background:rgba(107,191,107,.1)}
+.likert .scale-btn.selected[data-value="3"] .scale-num,.likert .scale-btn.selected[data-value="3"] .scale-lbl{color:#6BBF6B}
+.likert .scale-btn.selected[data-value="4"]{border-color:rgba(34,168,34,.4);background:rgba(34,168,34,.12)}
+.likert .scale-btn.selected[data-value="4"] .scale-num,.likert .scale-btn.selected[data-value="4"] .scale-lbl{color:#4ACA4A}
+
+.demo-screen{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.5rem;background:var(--bg);position:relative}
+.demo-screen::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(100,86,212,.1) 0%,transparent 60%);pointer-events:none}
+.demo-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem 2rem;max-width:500px;width:100%;box-shadow:var(--shadow);animation:fadeIn .5s ease;position:relative;z-index:1}
+.demo-card h2{font-family:var(--heading);font-size:1.6rem;font-weight:700;margin-bottom:.4rem;text-align:center;color:var(--text)}
+.demo-card .demo-sub{font-size:1rem;color:var(--text-muted);font-weight:300;line-height:1.65;margin-bottom:2rem;text-align:center}
+.demo-field{margin-bottom:1.5rem}
+.demo-field label{display:block;font-family:var(--body);font-size:.88rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.45rem}
+.demo-field label .optional{font-weight:400;color:var(--text-light);font-size:.82rem}
+.demo-field input[type="number"],.demo-field select,.demo-field textarea{width:100%;font-family:var(--body);font-size:1rem;padding:.7rem 1rem;border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,.04);color:var(--text);transition:border-color .15s;outline:none;-webkit-appearance:none;appearance:none}
+.demo-field input[type="number"]::placeholder{color:var(--text-light)}
+.demo-field select option{background:#1A2540;color:var(--text)}
+.demo-checkbox-field{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:.85rem;cursor:pointer}
+.demo-checkbox-field input[type="checkbox"]{margin-top:.15rem;width:20px;height:20px;flex-shrink:0;cursor:pointer;accent-color:var(--primary)}
+.demo-checkbox-field label{font-size:.9rem;color:var(--text-muted);cursor:pointer;line-height:1.4;font-weight:400;flex:1}
+.demo-field input[type="number"]:focus,.demo-field select:focus,.demo-field textarea:focus{border-color:rgba(165,148,255,.5);background:rgba(255,255,255,.06)}
+.demo-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23A09DB5' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+.demo-field textarea{resize:vertical;min-height:80px;line-height:1.5}
+.demo-field input[type="number"]{-moz-appearance:textfield}
+.demo-field input[type="number"]::-webkit-outer-spin-button,.demo-field input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.demo-error{background:var(--error-bg);color:var(--error);padding:.65rem 1rem;border-radius:var(--radius);font-size:.82rem;font-weight:500;margin-bottom:1rem;display:none;border:1px solid rgba(248,113,113,.2);text-align:center}
+.demo-error.visible{display:block}
+.demo-submit{width:100%;font-family:var(--body);font-size:1rem;font-weight:600;letter-spacing:.04em;padding:1rem;border-radius:100px;border:none;cursor:pointer;color:#fff;background:linear-gradient(135deg,#6456D4 0%,#5046C0 100%);box-shadow:0 0 0 1px rgba(100,86,212,.4),0 4px 20px rgba(91,77,199,.4);transition:all .2s ease;margin-top:.5rem;position:relative;overflow:hidden}
+.demo-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.1) 0%,transparent 60%);border-radius:inherit}
+.demo-submit:hover{background:linear-gradient(135deg,#7063DC 0%,#5B50CC 100%);box-shadow:0 0 0 1px rgba(112,99,220,.5),0 6px 28px rgba(91,77,199,.5);transform:translateY(-1px)}
+.demo-submit:active{transform:translateY(0)}
+@media(max-width:640px){
+  .demo-card{padding:1.75rem 1.25rem}
+  .demo-card h2{font-size:1.35rem}
+}
+
+.core-group{position:relative;border:1px solid rgba(232,184,96,.16);border-radius:var(--radius-lg);padding:1.25rem 1rem .9rem;margin-bottom:.85rem;background:linear-gradient(180deg,rgba(232,184,96,.04),rgba(232,184,96,0))}
+.core-group .dim-card{margin-bottom:.6rem}
+.core-group .dim-card:last-child{margin-bottom:0}
+.core-label{font-family:var(--heading);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(232,184,96,.85);text-align:center;margin-bottom:.85rem}
+.btn-compare{display:block;margin:2rem auto .25rem;font-family:var(--body);font-size:1rem;font-weight:600;letter-spacing:.01em;padding:1rem 2rem;border-radius:100px;border:1.5px solid rgba(232,184,96,.55);background:linear-gradient(135deg,rgba(232,184,96,.22),rgba(232,184,96,.08));color:#FFE9BD;cursor:pointer;transition:all .2s ease;width:100%;max-width:420px;box-shadow:0 4px 20px rgba(232,184,96,.12)}
+.btn-compare:hover{background:linear-gradient(135deg,rgba(232,184,96,.32),rgba(232,184,96,.14));border-color:rgba(232,184,96,.75);transform:translateY(-1px);box-shadow:0 6px 24px rgba(232,184,96,.2)}
+.btn-compare:active{transform:translateY(0)}
+.compare-page{max-width:640px;margin:0 auto;padding:2rem 1.25rem 4rem;animation:fadeIn .5s ease}
+.compare-page h1{font-family:var(--heading);font-size:1.7rem;font-weight:700;text-align:center;margin-bottom:.5rem;color:var(--text)}
+.compare-sub{text-align:center;font-size:.95rem;color:var(--text-muted);font-weight:300;margin-bottom:2rem;line-height:1.55}
+.chart-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem 1.1rem 1.1rem;margin-bottom:1rem;box-shadow:var(--shadow-sm)}
+.chart-title{font-family:var(--heading);font-size:1rem;font-weight:600;color:var(--text);margin-bottom:.85rem;line-height:1.3}
+.chart-svg{width:100%;height:auto;display:block;overflow:visible}
+.chart-callout{margin-top:.75rem;padding:.65rem .85rem;background:rgba(255,255,255,.03);border:1px solid var(--border-light);border-radius:10px;font-size:.85rem;line-height:1.45}
+.chart-score{color:var(--text);font-weight:600}
+.chart-pct{color:#E8B860;font-weight:700}
+.btn-back-results{display:block;margin:0 auto 1.5rem;background:transparent;border:1px solid var(--border);color:var(--text-muted);font-family:var(--body);font-size:.85rem;cursor:pointer;padding:.55rem 1.2rem;border-radius:100px;transition:all .15s ease}
+.btn-back-results:hover{background:rgba(255,255,255,.04);color:var(--text);border-color:rgba(255,255,255,.2)}
+@media(max-width:640px){
+  .compare-page{padding:1.25rem .75rem 3rem}
+  .compare-page h1{font-size:1.4rem}
+  .chart-card{padding:1.1rem .75rem .85rem}
+  .chart-title{font-size:.92rem}
+  .chart-callout{font-size:.8rem}
+  .core-label{font-size:.72rem}
+}
+
+.psy-page{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem;animation:fadeIn .5s ease}
+.psy-page h1{font-family:var(--heading);font-size:1.7rem;font-weight:700;text-align:center;margin-bottom:.5rem;color:var(--text)}
+.psy-h2{font-family:var(--heading);font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .35rem;border-bottom:1px solid var(--border-light);padding-bottom:.4rem}
+.psy-h3{font-family:var(--heading);font-size:.95rem;font-weight:600;color:rgba(220,215,235,.92);margin:1.25rem 0 .5rem}
+.psy-note{font-size:.85rem;color:var(--text-muted);font-weight:300;line-height:1.5;margin-bottom:.75rem}
+.psy-note em{font-style:italic;color:rgba(220,215,235,.85)}
+.psy-note-lg{font-size:.95rem;color:var(--text-muted);font-weight:300;line-height:1.55;margin-bottom:1rem}
+.irt-legend-list{list-style:none;margin:.1rem 0 .9rem;padding:0;font-size:.85rem;color:var(--text-muted);font-weight:300;line-height:1.6}
+.irt-legend-list li{padding:.05rem 0}
+.theta-glyph{font-family:Cambria,'Times New Roman',Georgia,serif;font-style:italic}
+.psy-table{width:100%;border-collapse:collapse;margin-bottom:1rem;font-family:var(--body);font-size:.85rem;background:rgba(255,255,255,.02);border:1px solid var(--border-light);border-radius:8px;overflow:hidden}
+.psy-table thead th{background:rgba(255,255,255,.04);color:rgba(220,215,235,.85);font-weight:600;text-align:left;padding:.55rem .7rem;font-size:.8rem;letter-spacing:.02em;border-bottom:1px solid var(--border-light)}
+.psy-table tbody td{padding:.5rem .7rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text);vertical-align:top}
+.psy-table tbody tr:last-child td{border-bottom:none}
+.psy-table tbody tr:hover{background:rgba(255,255,255,.02)}
+.psy-table-compact{font-size:.78rem}
+.psy-table-compact th,.psy-table-compact td{padding:.35rem .5rem}
+.btn-psychometrics{display:block;margin:1rem auto .25rem;font-family:var(--body);font-size:1rem;font-weight:600;letter-spacing:.01em;padding:1rem 2rem;border-radius:100px;border:1.5px solid rgba(232,184,96,.55);background:linear-gradient(135deg,rgba(232,184,96,.22),rgba(232,184,96,.08));color:#FFE9BD;cursor:pointer;transition:all .2s ease;width:100%;max-width:420px;box-shadow:0 4px 20px rgba(232,184,96,.12)}
+.btn-psychometrics:hover{background:linear-gradient(135deg,rgba(232,184,96,.32),rgba(232,184,96,.14));border-color:rgba(232,184,96,.75);transform:translateY(-1px);box-shadow:0 6px 24px rgba(232,184,96,.2)}
+@media(max-width:640px){
+  .psy-page{padding:1.25rem .65rem 3rem}
+  .psy-page h1{font-size:1.4rem}
+  .psy-h2{font-size:1rem}
+  .psy-h3{font-size:.88rem}
+  .psy-table{font-size:.78rem}
+  .psy-table thead th{padding:.4rem .45rem;font-size:.72rem}
+  .psy-table tbody td{padding:.4rem .45rem}
+  .psy-table-compact{font-size:.7rem}
+  .psy-table-compact th,.psy-table-compact td{padding:.3rem .35rem}
+}
+
+.btn-back-bottom{display:block;margin:1.75rem auto 0;font-family:var(--body);font-size:.95rem;font-weight:600;padding:.85rem 1.75rem;border-radius:100px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.04);color:#E8E4F4;cursor:pointer;transition:all .2s ease;width:100%;max-width:420px}
+.btn-back-bottom:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4);transform:translateY(-1px)}
+.btn-hub{display:block;margin:.85rem auto;font-family:var(--body);font-size:1.05rem;font-weight:600;letter-spacing:.01em;padding:1.1rem 1.5rem;border-radius:14px;border:1.5px solid rgba(155,141,255,.4);background:linear-gradient(135deg,rgba(123,111,224,.16),rgba(123,111,224,.05));color:#E0D9FF;cursor:pointer;transition:all .2s ease;width:100%;max-width:480px;text-align:center;box-shadow:0 4px 18px rgba(123,111,224,.1)}
+.btn-hub:hover{background:linear-gradient(135deg,rgba(123,111,224,.28),rgba(123,111,224,.14));border-color:rgba(155,141,255,.7);transform:translateY(-1px);box-shadow:0 6px 24px rgba(123,111,224,.2)}
+.btn-hub-desc{font-size:.8rem;font-weight:400;color:var(--text-muted);margin-top:.3rem;letter-spacing:0;text-transform:none}
+.psy-hub{max-width:520px;margin:0 auto;padding:2.5rem 1.25rem 4rem;animation:fadeIn .5s ease;text-align:center}
+.psy-hub h1{font-family:var(--heading);font-size:1.7rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
+.psy-hub-sub{font-size:.95rem;color:var(--text-muted);font-weight:300;margin-bottom:2rem;line-height:1.55}
+.psy-hub-text{margin:1.75rem auto 1.25rem;max-width:480px;text-align:left;font-size:.85rem;color:var(--text-muted);line-height:1.65;font-weight:300}
+.psy-hub-text p{margin-bottom:1rem}
+.psy-hub-text p:last-child{margin-bottom:0}
+.cfa-diagram-card{background:rgba(255,255,255,.02);border:1px solid var(--border-light);border-radius:10px;padding:1rem .75rem;margin:1rem 0 1.25rem;overflow-x:auto}
+.cfa-diagram-card svg{display:block;width:100%;height:auto;max-width:100%}
+.cfa-diagram-title{font-family:var(--heading);font-size:.95rem;font-weight:600;color:rgba(220,215,235,.92);margin-bottom:.5rem;text-align:center}
+.cfa-estimator-note{font-size:.78rem;color:var(--text-muted);font-style:italic;margin-bottom:.85rem;text-align:center}
+
+.irt-item{background:rgba(255,255,255,.025);border:1px solid var(--border-light);border-radius:10px;padding:1rem .9rem .85rem;margin-bottom:.85rem}
+.irt-item-text{font-family:var(--body);font-size:.92rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:.4rem}
+.irt-item-params{margin-bottom:.6rem;margin-top:.1rem;line-height:1.45;color:var(--text-muted);overflow:hidden}
+.irt-item-params::after{content:"";display:table;clear:both}
+.irt-fac-name{float:left;font-size:.83rem;font-weight:600;color:rgba(232,184,96,.85);letter-spacing:.01em;max-width:55%}
+.irt-pp{float:right;font-size:.84rem;color:rgba(220,215,235,.88);font-variant-numeric:tabular-nums;text-align:right}
+.irt-pp em{font-style:italic;color:rgba(255,233,189,.95)}
+@media(max-width:480px){
+  .irt-fac-name{float:none;display:block;font-size:.78rem;max-width:100%;margin-bottom:.2rem}
+  .irt-pp{float:none;display:block;text-align:left;font-size:.78rem}
+}
+.lgnd-sw{display:inline-block;width:.65rem;height:.65rem;border-radius:2px;margin:0 .15rem 0 .25rem;vertical-align:baseline;position:relative;top:1px}
+
+.cfa-tabs{display:flex;gap:.4rem;margin:1rem 0 1.25rem;background:rgba(255,255,255,.03);border:1px solid var(--border-light);border-radius:100px;padding:.3rem}
+.cfa-tab{flex:1;font-family:var(--body);font-size:.85rem;font-weight:600;letter-spacing:.01em;padding:.55rem .85rem;border-radius:100px;border:none;background:transparent;color:var(--text-muted);cursor:pointer;transition:all .2s ease}
+.cfa-tab:hover{color:var(--text)}
+.cfa-tab-active{background:linear-gradient(135deg,rgba(232,184,96,.22),rgba(232,184,96,.1));color:#FFE9BD;box-shadow:0 2px 8px rgba(232,184,96,.15)}
+.cfa-view{display:none}
+.cfa-view-active{display:block;animation:fadeIn .3s ease}
+@media(max-width:640px){
+  .cfa-tab{font-size:.78rem;padding:.5rem .55rem}
+}
+.tif-chart-card{background:rgba(255,255,255,.025);border:1px solid var(--border-light);border-radius:10px;padding:1rem .9rem .85rem;margin-bottom:.85rem}
+.tif-chart-title{font-family:var(--heading);font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.5rem;line-height:1.3}
+.tif-chart-meta{font-size:.78rem;color:var(--text-muted);margin-bottom:.3rem}
+.tif-legend{font-size:.78rem;color:var(--text-muted);margin-top:.4rem;line-height:1.5}
+.tif-legend-line{display:inline-block;width:18px;height:2px;background:#7B6FE0;vertical-align:middle;margin:0 .25rem 0 .35rem;position:relative;top:-1px}
+.tif-legend-line.dashed{background:none;border-top:1.5px dashed rgba(180,175,210,0.55)}
+.tif-section-intro{font-size:.85rem;color:var(--text-muted);font-weight:300;line-height:1.55;margin:1.5rem 0 1rem}
+</style>
+</head>
+<body>
+<div id="app"><div class="hero"><div class="hero-eyebrow">Psychopathy Assessment</div><div class="hero-rule"></div><h1>Prototypical Psychopathy Scale</h1><div class="hero-divider"></div><div class="hero-card"><p class="hero-sub">Measures <span style="color:rgba(220,215,245,.95);font-weight:400">four core features</span> of psychopathy.</p><p class="hero-sub" style="margin-top:0.5rem;font-size:.93rem">Answer based on how you have been most of the time, in most situations, over the past 5 years.</p><p class="hero-sub" style="margin-top:0.2rem;font-size:.93rem">Be honest, take your time, and have fun.</p></div><div class="hero-meta"><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"></path><rect x="9" y="3" width="6" height="4" rx="1"></rect></svg>27 questions</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>~3 minutes</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>Free results</div></div><button class="btn-hero" id="btnStart">Begin Assessment</button></div></div>
+<div class="submitting-overlay" id="submitting"><div class="spinner"></div><div class="spinner-text" id="spinnerText"></div></div>
+<script>
+const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbxy8h0sKulYJm0gXVeoIVoJy4hQs4JCGSIN7bJX3Uyg0Q-2aKfCDSydcyhXAtHkdPd__Q/exec';
+var S1_ITEMS=[
+    {id:'LIE6',factor:'INT',facet:'Charming and Deceitful Interpersonal Style',text:'To what extent would you describe yourself as a con-artist or hustler?',displayNum:1,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'IMPULSIVE3',factor:'LIF',facet:'Impulsive, Irresponsible and Aimless Lifestyle',text:'To what extent do you find it hard to stick with activities unless they\'re stimulating or exciting?',displayNum:2,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'POOR5',factor:'ANT',facet:'Reactive and Externalised Aggression',text:'To what extent do you have a pattern of \u201cflying off the handle\u201d in a rage at minor things?',displayNum:3,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'EMPATHY4',factor:'AFF',facet:'Deficient Affective Experience',text:'To what extent does other people\'s welfare fail to register for you emotionally?',displayNum:4,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'IRRESPONSIBLE2',factor:'LIF',facet:'Impulsive, Irresponsible and Aimless Lifestyle',text:'To what extent do you disregard tasks that you\'re expected to take care of?',displayNum:5,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'GLIB3',factor:'INT',facet:'Charming and Deceitful Interpersonal Style',text:'To what extent do you have an unusual ability to get away with things others can\'t?',displayNum:6,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'ADULT5',factor:'ANT',facet:'Reactive and Externalised Aggression',text:'To what extent, as an adult, have you gotten into physical fights?',displayNum:7,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'REMORSE1',factor:'AFF',facet:'Deficient Affective Experience',text:'To what extent do you lack remorse?',displayNum:8,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'IMPULSIVE1',factor:'LIF',facet:'Impulsive, Irresponsible and Aimless Lifestyle',text:'To what extent do you change plans based on what feels good in the moment?',displayNum:9,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'GLIB4',factor:'INT',facet:'Charming and Deceitful Interpersonal Style',text:'To what extent are you able to talk your way past almost any person?',displayNum:10,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'IRRESPONSIBLE5',factor:'LIF',facet:'Impulsive, Irresponsible and Aimless Lifestyle',text:'To what extent do you tend to be unreliable?',displayNum:11,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'REMORSE4',factor:'AFF',facet:'Deficient Affective Experience',text:'To what extent are you someone who doesn\'t feel sorry when they say they are?',displayNum:12,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'POOR2',factor:'ANT',facet:'Reactive and Externalised Aggression',text:'To what extent do you have a pattern of physically lashing out at objects when angry? (e.g., punching a wall, throwing something etc.)',displayNum:13,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'LIE1',factor:'INT',facet:'Charming and Deceitful Interpersonal Style',text:'To what extent can you adopt a false persona to con others?',displayNum:14,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'EMPATHY6',factor:'AFF',facet:'Deficient Affective Experience',text:'To what extent do other people\'s emotions feel foreign to you?',displayNum:15,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'LACKSGOALS5',factor:'LIF',facet:'Impulsive, Irresponsible and Aimless Lifestyle',text:'To what extent do you have a tendency to freeload off others?',displayNum:16,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'EMPATHY1',factor:'AFF',facet:'Deficient Affective Experience',text:'To what extent do you lack empathy?',displayNum:17,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'POOR4',factor:'ANT',facet:'Reactive and Externalised Aggression',text:'To what extent have you hit, slapped or otherwise attacked someone else in a moment of rage?',displayNum:18,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'GLIB5',factor:'INT',facet:'Charming and Deceitful Interpersonal Style',text:'To what extent can you get people to like you and trust you when they shouldn\'t?',displayNum:19,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'IRRESPONSIBLE1',factor:'LIF',facet:'Impulsive, Irresponsible and Aimless Lifestyle',text:'To what extent do you disregard your obligations to others?',displayNum:20,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'EMPATHY2',factor:'AFF',facet:'Deficient Affective Experience',text:'To what extent do you have a disdain or contempt for other people\'s emotions?',displayNum:21,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'GLIB2',factor:'INT',facet:'Charming and Deceitful Interpersonal Style',text:'To what extent can you turn your charm on and off like a tap?',displayNum:22,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'POOR1',factor:'ANT',facet:'Reactive and Externalised Aggression',text:'To what extent have you destroyed property in a moment of rage?',displayNum:23,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'IRRESPONSIBLE4',factor:'LIF',facet:'Impulsive, Irresponsible and Aimless Lifestyle',text:'To what extent do you behave irresponsibly?',displayNum:24,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'EMPATHY5',factor:'AFF',facet:'Deficient Affective Experience',text:'To what extent are you a cold and unemotional person?',displayNum:25,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'POOR3',factor:'ANT',facet:'Reactive and Externalised Aggression',text:'To what extent have you screamed at or verbally abused someone in a moment of rage?',displayNum:26,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']},
+    {id:'GLIB6',factor:'INT',facet:'Charming and Deceitful Interpersonal Style',text:'To what extent are you someone who could \u201csell ice to an eskimo\u201d?',displayNum:27,labels:['To no extent','To a slight extent','To a moderate extent','To a considerable extent','To a complete extent']}
+];
+
+var DIMS={
+  INT:{name:'Charming and Deceitful Interpersonal Style',desc:'Reflects an ability to use strategic charm, confidence, and deception to influence and manipulate others. High scorers impress as socially engaging, charismatic, and persuasive, while being willing and able to deceive people and exploit their assumptions for personal gain.',barClass:'dim-bar-fd'},
+  AFF:{name:'Deficient Affective Experience',desc:'Reflects a fundamental shallowness of emotional experience. High scorers lack empathy and remorse, and are often unable to form lasting emotional bonds with others. As a result, they tend to experience their friendships in a shallow, detached way, and have a tendency towards rational, utilitarian, and “means-to-an-end” styles of thinking.',barClass:'dim-bar-cr'},
+  LIF:{name:'Impulsive, Irresponsible and Aimless Lifestyle',desc:'Reflects a dysregulated reward system. High scorers tend to be strongly motivated by immediate reward and short-term gratification. As such, their internal motivation to pull their own weight, maintain effort towards long-term goals, or follow through on their promises and obligations is lacking.',barClass:'dim-bar-iss'},
+  ANT:{name:'Reactive and Externalised Aggression',desc:'Reflects a propensity for rapid, explosive outbursts of anger and aggression. Moderate scorers maintain some ability to control or inhibit these outbursts depending on the circumstance. High scorers have a markedly reduced ability to control these outbursts regardless of context, which puts them at greater risk of engaging in reactive violence and other behaviour that can result in criminal charges.',barClass:'dim-bar-as'}
+};
+var CORE_FACTORS=['INT','AFF','LIF','ANT'];
+// Item counts per factor (used for equally-weighted total)
+var FACTOR_ITEM_COUNTS={INT:7,AFF:7,LIF:7,ANT:6};
+// Distribution data from N=610 validation sample
+var DIST_DATA={"f1_bins":[127,120,123,79,55,36,19,19,11,7,10,2,1,1],"f2_bins":[167,140,79,94,49,25,14,15,5,10,4,1,2,5],"f3_bins":[17,55,91,116,112,88,53,25,29,15,3,3,2,1],"f4_bins":[271,153,81,50,24,20,6,0,3,0,1,1],"psych_bins":[13,65,99,129,93,75,55,33,21,4,14,4,1,3,0,1,0,0,0,0,0,0],"f1_edges":[0,2,4,6,8,10,12,14,16,18,20,22,24,26,28],"f2_edges":[0,2,4,6,8,10,12,14,16,18,20,22,24,26,28],"f3_edges":[0,2,4,6,8,10,12,14,16,18,20,22,24,26,28],"f4_edges":[0,2,4,6,8,10,12,14,16,18,20,22,24],"psych_edges":[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110],"f1_sorted":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,13,13,13,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,14,14,14,15,15,15,15,15,15,15,16,16,16,16,16,16,16,16,17,17,17,18,18,18,19,19,19,19,20,20,20,20,20,20,20,21,21,21,22,23,25,26],"f2_sorted":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,14,14,14,15,15,15,16,16,17,17,17,18,18,18,18,19,19,19,19,19,19,20,20,20,20,22,24,25,26,26,26,27,28],"f3_sorted":[0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,15,15,15,15,15,15,15,15,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,17,17,17,17,17,17,17,17,17,17,17,17,17,17,18,18,18,18,18,18,18,18,18,18,19,19,19,19,19,20,20,21,22,23,23,25,25,26],"f4_sorted":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,12,12,12,12,13,13,16,16,17,20,22],"psych_sorted":[1,1,1,1,2,2,2,2,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,22,22,22,22,22,22,22,22,22,22,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,27,27,27,27,27,27,27,27,27,27,27,28,28,28,28,28,28,28,28,28,28,28,28,28,29,29,29,29,29,29,29,29,29,29,29,29,29,29,30,30,30,30,30,30,30,30,30,30,31,31,31,31,31,31,31,31,31,31,32,32,32,32,32,32,32,32,32,32,32,32,32,33,33,33,33,33,33,33,33,33,33,33,34,34,34,34,34,34,34,34,34,34,34,35,35,35,35,35,35,35,35,35,35,35,36,36,36,36,36,37,37,37,37,37,37,37,38,38,38,38,38,39,39,39,39,39,40,40,41,41,41,41,41,41,42,42,42,42,42,43,43,43,43,44,44,44,44,45,45,46,46,50,51,51,51,51,51,52,52,53,53,54,54,54,54,56,58,58,59,63,66,67,69,76],"stds":{"f1":4.861821594242773,"f2":4.93442121691784,"f3":4.463038933278552,"f4":3.1941614918061307,"total":11.905273649126384}};
+// IRT parameters with item text
+var IRT_PARAMS=[{"id":"LIE6","f":"INT","text":"To what extent would you describe yourself as a con-artist or hustler?","a":1.342,"b1":1.146,"b2":2.438,"b3":3.752,"b4":4.992},{"id":"IMPULSIVE3","f":"LIF","text":"To what extent do you find it hard to stick with activities unless they’re stimulating or exciting?","a":1.221,"b1":-2.44,"b2":-0.753,"b3":0.343,"b4":1.816},{"id":"POOR5","f":"ANT","text":"To what extent do you have a pattern of “flying off the handle” in a rage at minor things?","a":1.889,"b1":-0.192,"b2":1.165,"b3":2.06,"b4":3.147},{"id":"EMPATHY4","f":"AFF","text":"To what extent does other people’s welfare fail to register for you emotionally?","a":2.404,"b1":0.314,"b2":1.452,"b3":2.064,"b4":2.851},{"id":"IRRESPONSIBLE2","f":"LIF","text":"To what extent do you disregard tasks that you’re expected to take care of?","a":1.756,"b1":-1.208,"b2":0.42,"b3":1.684,"b4":3.06},{"id":"GLIB3","f":"INT","text":"To what extent do you have an unusual ability to get away with things others can’t?","a":1.526,"b1":-0.659,"b2":0.633,"b3":1.625,"b4":3.063},{"id":"ADULT5","f":"ANT","text":"To what extent, as an adult, have you gotten into physical fights?","a":1.417,"b1":1.915,"b2":3.15,"b3":4.098,"b4":5.305},{"id":"REMORSE1","f":"AFF","text":"To what extent do you lack remorse?","a":2.206,"b1":0.383,"b2":1.707,"b3":2.306,"b4":3.336},{"id":"IMPULSIVE1","f":"LIF","text":"To what extent do you change plans based on what feels good in the moment?","a":1.179,"b1":-2.134,"b2":0.095,"b3":1.713,"b4":3.242},{"id":"GLIB4","f":"INT","text":"To what extent are you able to talk your way past almost any person?","a":2.431,"b1":-0.218,"b2":1.014,"b3":1.97,"b4":2.656},{"id":"IRRESPONSIBLE5","f":"LIF","text":"To what extent do you tend to be unreliable?","a":2.394,"b1":-0.612,"b2":0.852,"b3":1.74,"b4":2.553},{"id":"REMORSE4","f":"AFF","text":"To what extent are you someone who doesn’t feel sorry when they say they are?","a":1.736,"b1":-0.056,"b2":1.333,"b3":2.269,"b4":3.352},{"id":"POOR2","f":"ANT","text":"To what extent do you have a pattern of physically lashing out at objects when angry? (e.g., punching a wall, throwing something)","a":2.182,"b1":0.523,"b2":1.613,"b3":2.321,"b4":3.128},{"id":"LIE1","f":"INT","text":"To what extent can you adopt a false persona to con others?","a":1.722,"b1":-0.241,"b2":1.023,"b3":1.836,"b4":2.944},{"id":"EMPATHY6","f":"AFF","text":"To what extent do other people’s emotions feel foreign to you?","a":2.203,"b1":-0.414,"b2":0.583,"b3":1.319,"b4":2.266},{"id":"LACKSGOALS5","f":"LIF","text":"To what extent do you have a tendency to freeload off others?","a":1.133,"b1":-0.456,"b2":1.668,"b3":3.376,"b4":4.45},{"id":"EMPATHY1","f":"AFF","text":"To what extent do you lack empathy?","a":4.196,"b1":0.161,"b2":1.217,"b3":1.846,"b4":2.819},{"id":"POOR4","f":"ANT","text":"To what extent have you hit, slapped or otherwise attacked someone else in a moment of rage?","a":1.545,"b1":0.989,"b2":2.771,"b3":3.625,"b4":3.738},{"id":"GLIB5","f":"INT","text":"To what extent can you get people to like you and trust you when they shouldn’t?","a":2.408,"b1":-0.093,"b2":0.857,"b3":1.578,"b4":2.511},{"id":"IRRESPONSIBLE1","f":"LIF","text":"To what extent do you disregard your obligations to others?","a":2.492,"b1":-0.102,"b2":1.531,"b3":2.653,"b4":3.457},{"id":"EMPATHY2","f":"AFF","text":"To what extent do you have a disdain or contempt for other people’s emotions?","a":2.018,"b1":0.062,"b2":1.425,"b3":2.123,"b4":3.119},{"id":"GLIB2","f":"INT","text":"To what extent can you turn your charm on and off like a tap?","a":2.482,"b1":-0.297,"b2":0.898,"b3":1.574,"b4":2.325},{"id":"POOR1","f":"ANT","text":"To what extent have you destroyed property in a moment of rage?","a":2.438,"b1":0.932,"b2":2.092,"b3":2.746,"b4":2.95},{"id":"IRRESPONSIBLE4","f":"LIF","text":"To what extent do you behave irresponsibly?","a":1.671,"b1":-1.007,"b2":0.828,"b3":2.153,"b4":3.562},{"id":"EMPATHY5","f":"AFF","text":"To what extent are you a cold and unemotional person?","a":2.057,"b1":-0.031,"b2":1.137,"b3":2.058,"b4":2.823},{"id":"POOR3","f":"ANT","text":"To what extent have you screamed at or verbally abused someone in a moment of rage?","a":1.857,"b1":-0.121,"b2":1.183,"b3":2.091,"b4":2.809},{"id":"GLIB6","f":"INT","text":"To what extent are you someone who could “sell ice to an eskimo”?","a":2.401,"b1":0.891,"b2":1.71,"b3":2.333,"b4":2.924}];
+// Test Information Function curves (theta from -5.0 to +5.0, step 0.1, 101 points each)
+var TIF_DATA={"INT": [0.0045, 0.0053, 0.0062, 0.0073, 0.0085, 0.01, 0.0117, 0.0137, 0.0161, 0.0189, 0.0222, 0.026, 0.0306, 0.036, 0.0424, 0.0499, 0.0588, 0.0693, 0.0818, 0.0966, 0.114, 0.1347, 0.1593, 0.1885, 0.2231, 0.2642, 0.313, 0.371, 0.4399, 0.5217, 0.6188, 0.7339, 0.8703, 1.0315, 1.2217, 1.4451, 1.7063, 2.0093, 2.3577, 2.7529, 3.1937, 3.6749, 4.1858, 4.7097, 5.2245, 5.7049, 6.1265, 6.4708, 6.7305, 6.9125, 7.0376, 7.1359, 7.24, 7.3768, 7.561, 7.7916, 8.0526, 8.3181, 8.56, 8.7567, 8.8983, 8.9881, 9.0391, 9.067, 9.0845, 9.0977, 9.1074, 9.112, 9.1104, 9.1031, 9.0903, 9.0688, 9.0305, 8.9617, 8.8462, 8.6685, 8.4172, 8.088, 7.6838, 7.2141, 6.6937, 6.1408, 5.5744, 5.0131, 4.4727, 3.9656, 3.5, 3.0805, 2.7083, 2.3821, 2.0992, 1.8556, 1.6471, 1.4694, 1.3182, 1.1896, 1.0799, 0.9859, 0.9047, 0.8338, 0.7711], "AFF": [0.0011, 0.0014, 0.0016, 0.002, 0.0024, 0.0029, 0.0036, 0.0043, 0.0053, 0.0064, 0.0078, 0.0095, 0.0116, 0.0141, 0.0172, 0.021, 0.0256, 0.0312, 0.0381, 0.0465, 0.0567, 0.0693, 0.0847, 0.1034, 0.1263, 0.1543, 0.1885, 0.2301, 0.2808, 0.3424, 0.4172, 0.5078, 0.617, 0.7484, 0.9057, 1.093, 1.3148, 1.5755, 1.8798, 2.2322, 2.6373, 3.0999, 3.6261, 4.2235, 4.9026, 5.6764, 6.5564, 7.5439, 8.6123, 9.6868, 10.6359, 11.301, 11.5681, 11.4403, 11.0477, 10.585, 10.2332, 10.1131, 10.2727, 10.6856, 11.2512, 11.8151, 12.2275, 12.4254, 12.4703, 12.4943, 12.5899, 12.7334, 12.8026, 12.6735, 12.3204, 11.8379, 11.381, 11.0859, 11.0219, 11.1731, 11.4362, 11.6392, 11.5976, 11.1976, 10.4517, 9.4768, 8.419, 7.3906, 6.4497, 5.6128, 4.8744, 4.2223, 3.6448, 3.1329, 2.6801, 2.2814, 1.9327, 1.63, 1.369, 1.1457, 0.9559, 0.7954, 0.6603, 0.5472, 0.4528], "LIF": [0.1194, 0.1339, 0.1501, 0.1681, 0.188, 0.2101, 0.2346, 0.2615, 0.2911, 0.3235, 0.359, 0.3977, 0.4398, 0.4853, 0.5346, 0.5876, 0.6447, 0.7058, 0.7713, 0.8414, 0.9163, 0.9966, 1.0826, 1.175, 1.2745, 1.3821, 1.4987, 1.6253, 1.763, 1.9128, 2.0755, 2.2518, 2.442, 2.6464, 2.8644, 3.0954, 3.338, 3.5901, 3.8487, 4.1094, 4.3667, 4.614, 4.8438, 5.0489, 5.2229, 5.3613, 5.4616, 5.5237, 5.5501, 5.5462, 5.5201, 5.4823, 5.4441, 5.4162, 5.4064, 5.4187, 5.4534, 5.508, 5.579, 5.6629, 5.7567, 5.8574, 5.9603, 6.0585, 6.1429, 6.2044, 6.2362, 6.2373, 6.2131, 6.1744, 6.1344, 6.1039, 6.0879, 6.0831, 6.0795, 6.0629, 6.02, 5.9425, 5.8294, 5.686, 5.5207, 5.3411, 5.1509, 4.9487, 4.7297, 4.4888, 4.2233, 3.9345, 3.6284, 3.3137, 3.0, 2.6964, 2.4097, 2.1446, 1.9035, 1.6869, 1.4941, 1.3235, 1.1732, 1.041, 0.9247], "ANT": [0.0012, 0.0014, 0.0017, 0.002, 0.0024, 0.0029, 0.0034, 0.0041, 0.0049, 0.0059, 0.0071, 0.0084, 0.0101, 0.0121, 0.0145, 0.0174, 0.0209, 0.0251, 0.0301, 0.0361, 0.0433, 0.052, 0.0624, 0.0748, 0.0897, 0.1076, 0.1289, 0.1544, 0.1847, 0.2209, 0.2638, 0.3146, 0.3745, 0.4449, 0.5271, 0.6227, 0.7331, 0.8594, 1.0028, 1.1639, 1.3427, 1.5388, 1.7509, 1.977, 2.2149, 2.4617, 2.715, 2.9724, 3.2326, 3.4947, 3.7584, 4.0233, 4.2884, 4.5513, 4.808, 5.0527, 5.2785, 5.4783, 5.6462, 5.7789, 5.8774, 5.9467, 5.9955, 6.0342, 6.0727, 6.1186, 6.1759, 6.2441, 6.3191, 6.3946, 6.4636, 6.5206, 6.5628, 6.5901, 6.6038, 6.6046, 6.5908, 6.5569, 6.4945, 6.3938, 6.2459, 6.0451, 5.7908, 5.4878, 5.1459, 4.7778, 4.3972, 4.017, 3.6482, 3.2989, 2.9743, 2.6775, 2.4093, 2.1695, 1.9566, 1.7687, 1.6037, 1.4591, 1.3325, 1.2216, 1.1239], "TOT": [0.1262, 0.142, 0.1596, 0.1793, 0.2014, 0.2259, 0.2532, 0.2836, 0.3173, 0.3547, 0.396, 0.4417, 0.4921, 0.5476, 0.6087, 0.676, 0.75, 0.8315, 0.9213, 1.0205, 1.1304, 1.2526, 1.3889, 1.5417, 1.7137, 1.9082, 2.1291, 2.3808, 2.6684, 2.9978, 3.3753, 3.808, 4.3038, 4.8712, 5.519, 6.2564, 7.0922, 8.0345, 9.089, 10.2584, 11.5405, 12.9276, 14.4065, 15.9591, 17.5649, 19.2043, 20.8594, 22.5108, 24.1256, 25.6403, 26.9521, 27.9425, 28.5406, 28.7846, 28.823, 28.848, 29.0176, 29.4174, 30.0579, 30.8841, 31.7836, 32.6073, 33.2224, 33.5851, 33.7704, 33.915, 34.1094, 34.3268, 34.4453, 34.3457, 34.0087, 33.5313, 33.0621, 32.7209, 32.5515, 32.5091, 32.4642, 32.2267, 31.6053, 30.4915, 28.9121, 27.0038, 24.9351, 22.8402, 20.798, 18.8449, 16.9948, 15.2544, 13.6298, 12.1276, 10.7536, 9.5109, 8.3989, 7.4135, 6.5473, 5.7909, 5.1335, 4.5639, 4.0707, 3.6436, 3.2726]};
+var TIF_THETA_MIN=-5,TIF_THETA_STEP=0.1;
+
+// Page flow: 0=welcome, 1=explainer, 2..S1END=section1, S1END+1=likertExplainer, S1END+2..S2END=section2, S2END+1=results
+var ITEM_START=2;
+var S1_TOTAL=S1_ITEMS.length;
+var DEMOGRAPHICS_PAGE=ITEM_START+S1_TOTAL;
+var RESULTS_PAGE=DEMOGRAPHICS_PAGE+1;
+var COMPARISON_PAGE=RESULTS_PAGE+1;
+var PSYCHOMETRICS_PAGE=COMPARISON_PAGE+1;
+var CFA_PAGE=PSYCHOMETRICS_PAGE+1;
+var IRT_PAGE=CFA_PAGE+1;
+var CFA_PAGE=PSYCHOMETRICS_PAGE+1;
+var IRT_PAGE=CFA_PAGE+1;
+
+var state={currentPage:0,responses:{},startTime:null,s1EndTime:null,pageStartTimes:[],pageTimes:[],respondentId:'R'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),ipData:{},firstVisit:true,slideDir:'fwd',s1Submitted:false};
+
+var VPN_KEYWORDS=['vpn','nord','express','surfshark','cyberghost','private internet','mullvad','proton','pia ','windscribe','tunnelbear','ivpn','hide.me','hotspot shield','ipvanish','purevpn','torguard','astrill','vypr','zenmate','strongvpn','datacenter','hosting','cloud','server','hetzner','digitalocean','ovh','amazon','aws','linode','vultr','choopa','m247','datacamp','psychz','leaseweb','quadranet','cogent','zscaler'];
+var SUBMIT_SECRET='pps_8Kv3nQ7xW2mP';
+function generateToken(rid){var s=SUBMIT_SECRET+':'+rid;var h=0;for(var i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0}return 'tk_'+Math.abs(h).toString(36)}
+(function(){
+  fetch('https://ipapi.co/json/')
+    .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+    .then(function(d){var org=(d.org||'').toLowerCase();state.ipData={ip:d.ip||'',country:d.country_name||'',region:d.region||'',city:d.city||'',isp:d.org||'',is_vpn:VPN_KEYWORDS.some(function(kw){return org.indexOf(kw)!==-1})}})
+    .catch(function(){
+      fetch('https://api.ipapi.is/').then(function(r){return r.json()}).then(function(d){state.ipData={ip:d.ip||'',country:(d.location&&d.location.country)||'',region:(d.location&&d.location.state)||'',city:(d.location&&d.location.city)||'',isp:(d.company&&d.company.name)||'',is_vpn:d.is_vpn||d.is_proxy||d.is_datacenter||d.is_tor||false}}).catch(function(){state.ipData={ip:'unavailable',is_vpn:false}});
+    });
+})();
+
+function render(){
+  var app=document.getElementById('app'),p=state.currentPage,html='';
+  document.body.classList.remove('on-results');
+  if(p===0)html=renderWelcome();
+  else if(p===1)html=renderExplainer();
+  else if(p>=ITEM_START&&p<DEMOGRAPHICS_PAGE)html=renderItemPage(p-ITEM_START,S1_ITEMS,false);
+  else if(p===DEMOGRAPHICS_PAGE)html=renderDemographics();
+  else if(p===RESULTS_PAGE){document.body.classList.add('on-results');html=renderResults()}
+  else if(p===COMPARISON_PAGE){document.body.classList.add('on-results');html=renderComparison()}
+  else if(p===PSYCHOMETRICS_PAGE){document.body.classList.add('on-results');html=renderPsychometricsHub()}
+  else if(p===CFA_PAGE){document.body.classList.add('on-results');html=renderCFA()}
+  else if(p===IRT_PAGE){document.body.classList.add('on-results');html=renderIRT()}
+  else if(p===CFA_PAGE){document.body.classList.add('on-results');html=renderCFA()}
+  else if(p===IRT_PAGE){document.body.classList.add('on-results');html=renderIRT()}
+  app.innerHTML=html;attachListeners();
+  if(p===RESULTS_PAGE)setTimeout(animateResults,100);
+  if(p===COMPARISON_PAGE)setTimeout(animateComparison,50);
+}
+
+function renderWelcome(){
+  return '<div class="hero"><div class="hero-eyebrow">Psychopathy Assessment</div><div class="hero-rule"></div><h1>Prototypical Psychopathy Scale</h1><div class="hero-divider"></div><div class="hero-card"><p class="hero-sub">Measures <span style="color:rgba(220,215,245,.95);font-weight:400">four core features</span> of psychopathy.</p><p class="hero-sub" style="margin-top:0.5rem;font-size:.93rem">Answer based on how you have been most of the time, in most situations, over the past 5 years.</p><p class="hero-sub" style="margin-top:0.2rem;font-size:.93rem">Be honest, take your time, and have fun.</p></div><div class="hero-meta"><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>27 questions</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>~3 minutes</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Free results</div></div><button class="btn-hero" id="btnStart">Begin Assessment</button></div>';
+}
+
+function renderExplainer(){
+  return '<div class="explainer"><div class="explainer-card"><h2>How the scale works</h2><p class="explainer-sub">The scale works like a thermometer \u2014 it is designed to measure the <strong><em>intensity</em></strong> of specific traits. There is no neutral option \u2014 a middle answer means the trait applies moderately.</p><div class="explainer-demo"><div class="explainer-label">Each question is rated on a 0–4 scale:</div><div class="tri-container"><div class="tri-numbers"><div class="tri-num">0</div><div class="tri-num">1</div><div class="tri-num">2</div><div class="tri-num">3</div><div class="tri-num">4</div></div><div class="tri-shape"><div class="tri-shape-inner"></div></div><div class="tri-labels"><span class="tri-label-l">Not at all</span><span class="tri-label-m">Moderately</span><span class="tri-label-r">Completely</span></div></div></div><button class="btn-hero" id="btnGotIt">Got it, let\u2019s go</button></div><button class="btn-explainer-back" id="btnExplainerBack">← Back</button></div></div>';
+}
+
+function renderItemPage(idx,items,isLikert){
+  var item=items[idx];
+  var selected=state.responses[item.id];
+  // Progress: section 1 uses displayNum/69 (validity items share displayNum with next real item).
+  // Section 2 uses standard idx-based percentage.
+  var progress, progressLabel;
+  if(isLikert){
+    progress=Math.round(((idx+1)/items.length)*100);
+    progressLabel=progress+'% completed';
+  } else {
+    var dn=item.displayNum||(idx+1);
+    progress=Math.round((dn/27)*100);
+    progressLabel='Item '+dn+' of 27';
+  }
+  var isFirst=idx===0&&!isLikert&&state.firstVisit;
+  if(isFirst)state.firstVisit=false;
+  var isLast=isLikert?(idx>=items.length-1):false;
+  var isS1Last=!isLikert&&idx>=items.length-1;
+
+  var isSpecial=!isLikert&&item.text.indexOf('Suppose ')===0;
+  var questionHtml;
+  if(isSpecial){
+    var parts=item.text.split('To what extent ');
+    questionHtml='<div class="item-question-special">'+parts[0]+'</div><div class="item-question-special-main">To what extent '+parts[1]+'</div>';
+  } else if(isLikert){
+    questionHtml='<div class="item-question">'+item.text+'</div>';
+  } else {
+    questionHtml='<div class="item-question">'+item.text+'</div>';
+  }
+
+  var labels=item.labels;
+  var scaleHtml='';
+  labels.forEach(function(label,v){
+    var sel=selected===v?' selected':'';
+    if(isLikert){
+      scaleHtml+='<div class="scale-btn'+sel+'" data-item="'+item.id+'" data-value="'+v+'"><div class="scale-lbl">'+label+'</div></div>';
+    } else {
+      var numLabel=(item.nums&&item.nums[v])||v;
+      scaleHtml+='<div class="scale-btn'+sel+'" data-item="'+item.id+'" data-value="'+v+'"><div class="scale-num">'+numLabel+'</div><div class="scale-lbl">'+label+'</div></div>';
+    }
+  });
+
+  var headerClass=isSpecial?' hidden':'';
+  if(isFirst)headerClass+=' first-load';
+  var questionSlideClass=isFirst?'first-load':(state.slideDir==='bwd'?'slide-bwd':'slide-fwd');
+
+  var headerText=isLikert?'':'';
+  var wrapClass=isLikert?' likert':'';
+
+  var html='<div class="survey-shell">';
+  html+='<div class="progress-container"><div class="progress-top"><span class="progress-title">Prototypical Psychopathy Scale</span><span class="progress-pct">'+progressLabel+'</span></div><div class="progress-track"><div class="progress-fill" style="width:'+progress+'%"></div></div></div>';
+  html+='<div class="slide-area">';
+  html+='<div class="content-anchor">';
+  html+='<div class="text-section">';
+  html+='<div class="question-slide '+questionSlideClass+'">'+questionHtml+'</div>';
+  html+='<div class="error-msg" id="itemError"></div>';
+  html+='</div>';
+  html+='<div class="scale-section"><div class="scale-wrap'+wrapClass+'">'+scaleHtml+'</div></div>';
+  html+='</div>';
+  html+='</div>';
+  html+='<div class="nav-row">';
+  html+='<button class="btn-nav btn-back" id="btnBack">Back</button>';
+  html+='<button class="btn-nav btn-next" id="btnNext">'+((isLast||isS1Last)?'Submit':'Continue')+'</button>';
+  html+='</div></div>';
+  return html;
+}
+
+function calcScores(){
+  var scores={},counts={};
+  CORE_FACTORS.forEach(function(f){scores[f]=0;counts[f]=0});
+  S1_ITEMS.forEach(function(item){
+    if(CORE_FACTORS.indexOf(item.factor)===-1)return;
+    var raw=state.responses[item.id];if(raw===undefined)return;
+    scores[item.factor]+=raw;counts[item.factor]++;
+  });
+  var pcts={},raws={},maxes={};
+  CORE_FACTORS.forEach(function(f){
+    pcts[f]=counts[f]>0?Math.round((scores[f]/(counts[f]*4))*100):0;
+    raws[f]=scores[f];
+    // Max possible = (number of items for this factor) * 4 (max per item on 0-4 scale)
+    maxes[f]=FACTOR_ITEM_COUNTS[f]*4;
+  });
+  return {pcts:pcts,raws:raws,maxes:maxes};
+}
+
+function renderDemographics(){
+  var countries=['Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda','Argentina','Armenia','Australia','Austria','Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','Bosnia and Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina Faso','Burundi','Cabo Verde','Cambodia','Cameroon','Canada','Central African Republic','Chad','Chile','China','Colombia','Comoros','Congo (DRC)','Congo (Republic)','Costa Rica','Croatia','Cuba','Cyprus','Czech Republic','Denmark','Djibouti','Dominica','Dominican Republic','Ecuador','Egypt','El Salvador','Equatorial Guinea','Eritrea','Estonia','Eswatini','Ethiopia','Fiji','Finland','France','Gabon','Gambia','Georgia','Germany','Ghana','Greece','Grenada','Guatemala','Guinea','Guinea-Bissau','Guyana','Haiti','Honduras','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Ivory Coast','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kiribati','Kosovo','Kuwait','Kyrgyzstan','Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg','Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands','Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Montenegro','Morocco','Mozambique','Myanmar','Namibia','Nauru','Nepal','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','North Korea','North Macedonia','Norway','Oman','Pakistan','Palau','Palestine','Panama','Papua New Guinea','Paraguay','Peru','Philippines','Poland','Portugal','Qatar','Romania','Russia','Rwanda','Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','South Korea','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Sweden','Switzerland','Syria','Taiwan','Tajikistan','Tanzania','Thailand','Timor-Leste','Togo','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Vanuatu','Vatican City','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe'];
+  var opts='<option value="">Select your country\u2026</option>';
+  countries.forEach(function(c){opts+='<option value="'+c+'">'+c+'</option>'});
+  var html='<div class="demo-screen"><div class="demo-card">';
+  html+='<h2>Almost done!</h2>';
+  html+='<p class="demo-sub">Just a couple of quick details before your results.</p>';
+  html+='<div class="demo-error" id="demoError"></div>';
+  html+='<div class="demo-field"><label>Age</label><input type="number" id="demoAge" min="13" max="120" placeholder="Enter your age"></div>';
+  html+='<div class="demo-field"><label>Gender</label><select id="demoGender"><option value="">Select your gender…</option><option value="Male">Male</option><option value="Female">Female</option><option value="Non-binary">Non-binary</option><option value="Other">Other</option><option value="Prefer not to say">Prefer not to say</option></select></div>';
+  html+='<div class="demo-field"><label>Country</label><select id="demoCountry">'+opts+'</select></div>';
+  html+='<div class="demo-checkbox-field"><input type="checkbox" id="demoAccurate"><label for="demoAccurate">Tick this box if your answers were accurate</label></div>';
+  html+='<div class="demo-checkbox-field"><input type="checkbox" id="demoConsent"><label for="demoConsent">Tick this box if you consent to your answers being used to validate this instrument</label></div>';
+  html+='<button class="demo-submit" id="btnDemoSubmit">See my results</button>';
+  html+='</div></div>';
+  return html;
+}
+
+function renderResults(){
+  var sc=calcScores();
+  var pcts=sc.pcts,raws=sc.raws,maxes=sc.maxes;
+  function dimCard(key){var dim=DIMS[key];return '<div class="dim-card"><div class="dim-header"><span class="dim-name">'+dim.name+'</span><span class="dim-pct">'+raws[key]+' / '+maxes[key]+'</span></div><div class="dim-desc">'+dim.desc+'</div><div class="dim-bar-track"><div class="dim-bar-fill '+dim.barClass+'" id="bar-'+key+'" style="width:0%"></div></div></div>'}
+  var html='<div class="results"><h1>Your Results</h1><p class="results-sub">Here\u2019s how you scored.</p>';
+  html+='<div class="core-group"><div class="core-label">The Interpersonal/Affective \u201cCore\u201d of Psychopathy.</div>';
+  html+=dimCard('INT');
+  html+=dimCard('AFF');
+  html+='</div>';
+  html+='<div class="core-group shell-group"><div class="core-label">The Disinhibited Behavioural \u201cShell\u201d of Psychopathy.</div>';
+  html+=dimCard('LIF');
+  html+=dimCard('ANT');
+  html+='</div>';
+  html+='<button class="btn-compare" id="btnCompare">See how your score compares to others</button>';
+  html+='</div>';
+  return html;
+}
+
+function animateResults(){
+  var sc=calcScores();
+  var pcts=sc.pcts;
+  CORE_FACTORS.forEach(function(key){var bar=document.getElementById('bar-'+key);if(bar)bar.style.width=pcts[key]+'%'});
+}
+
+
+// ===== Comparison page =====
+function calcRawFactor(key){
+  var sum=0;
+  S1_ITEMS.forEach(function(item){
+    if(item.factor!==key)return;
+    var v=state.responses[item.id];
+    if(v!==undefined)sum+=v;
+  });
+  return sum;
+}
+function calcPsychTotal(){
+  // Raw sum across all 27 items (max 108)
+  var sum=0;
+  CORE_FACTORS.forEach(function(f){sum+=calcRawFactor(f)});
+  return sum;
+}
+function percentileOf(sortedArr,score){
+  // STRICT % below: returns raw % of sample with score strictly LESS than user's.
+  // No half-credit for ties — being tied with someone is not "higher than" them.
+  // So min score → 0%, max score → ~100%.
+  var n=sortedArr.length,below=0;
+  for(var i=0;i<n;i++){
+    if(sortedArr[i]<score)below++;
+    else break;
+  }
+  return (below/n)*100;
+}
+function gaussKDE(data,bw,x){
+  var sum=0,n=data.length;
+  for(var i=0;i<n;i++){var u=(x-data[i])/bw;sum+=Math.exp(-0.5*u*u)}
+  return sum/(n*bw*Math.sqrt(2*Math.PI));
+}
+function buildChartSVG(opts){
+  // opts: {bins, edges, maxX, userScore, fillColor, rawData, std, xLabelStep}
+  // edges define non-uniform bin boundaries (edges[i] to edges[i+1] = bin i)
+  var bins=opts.bins,edges=opts.edges,maxX=opts.maxX,userScore=opts.userScore,fill=opts.fillColor;
+  var W=420,H=240,padL=42,padR=14,padT=12,padB=46;
+  var plotW=W-padL-padR,plotH=H-padT-padB;
+  var maxCount=Math.max.apply(null,bins);
+  var yMax=Math.ceil(maxCount/50)*50;
+  if(yMax<maxCount)yMax=maxCount;
+  if(yMax===0)yMax=10;
+  var svg='<svg class="chart-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">';
+  // Y-axis grid + labels
+  var nTicks=4;
+  for(var t=0;t<=nTicks;t++){
+    var yVal=Math.round((yMax/nTicks)*t);
+    var yPos=padT+plotH-(yVal/yMax)*plotH;
+    svg+='<line x1="'+padL+'" y1="'+yPos+'" x2="'+(W-padR)+'" y2="'+yPos+'" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>';
+    svg+='<text x="'+(padL-6)+'" y="'+(yPos+3.5)+'" text-anchor="end" font-size="10" fill="rgba(180,175,210,0.65)" font-family="Source Sans 3,sans-serif">'+yVal+'</text>';
+  }
+  // Bars uniform pixel-width, centered at each bin's center on the x-axis
+  var nBins=bins.length;
+  // Use modal bin width to determine bar pixel width (so all bars look same thickness)
+  var widths={};
+  for(var ii=0;ii<nBins;ii++){var w=edges[ii+1]-edges[ii];widths[w]=(widths[w]||0)+1}
+  var modalW=2;var maxFreq=0;
+  for(var w2 in widths){if(widths[w2]>maxFreq){maxFreq=widths[w2];modalW=parseFloat(w2)}}
+  var barPixWidth=(modalW/maxX)*plotW*0.78;
+  for(var i=0;i<nBins;i++){
+    var loEdge=edges[i],hiEdge=edges[i+1];
+    var binCenter=(loEdge+hiEdge)/2;
+    var centerX=padL+(binCenter/maxX)*plotW;
+    var x=centerX-barPixWidth/2;
+    var cnt=bins[i],h=(cnt/yMax)*plotH;
+    var y=padT+plotH-h;
+    svg+='<rect x="'+x.toFixed(2)+'" y="'+y.toFixed(2)+'" width="'+barPixWidth.toFixed(2)+'" height="'+h.toFixed(2)+'" fill="'+fill+'" fill-opacity="0.55" rx="1"/>';
+  }
+  // KDE curve overlay (uses modalW computed above for bar widths)
+  if(opts.rawData&&opts.std){
+    var nPts=opts.rawData.length;
+    var bw=1.06*opts.std*Math.pow(nPts,-0.2);
+    var samples=140;
+    var path='';
+    for(var p=0;p<=samples;p++){
+      var xv=(p/samples)*maxX;
+      var density=gaussKDE(opts.rawData,bw,xv);
+      var countEst=density*nPts*modalW;
+      var yPx=padT+plotH-(countEst/yMax)*plotH;
+      var xPx=padL+(xv/maxX)*plotW;
+      path+=(p===0?'M':'L')+xPx.toFixed(2)+' '+yPx.toFixed(2)+' ';
+    }
+    svg+='<path d="'+path+'" stroke="rgba(255,255,255,0.95)" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>';
+  }
+  // X-axis baseline
+  svg+='<line x1="'+padL+'" y1="'+(padT+plotH)+'" x2="'+(W-padR)+'" y2="'+(padT+plotH)+'" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>';
+  // X-axis labels
+  var step=opts.xLabelStep||4;
+  for(var xv2=0;xv2<=maxX;xv2+=step){
+    var xPos=padL+(xv2/maxX)*plotW;
+    svg+='<line x1="'+xPos+'" y1="'+(padT+plotH)+'" x2="'+xPos+'" y2="'+(padT+plotH+4)+'" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>';
+    svg+='<text x="'+xPos+'" y="'+(padT+plotH+15)+'" text-anchor="middle" font-size="10" fill="rgba(180,175,210,0.7)" font-family="Source Sans 3,sans-serif">'+xv2+'</text>';
+  }
+  // User indicator
+  var clampedScore=Math.max(0,Math.min(maxX,userScore));
+  var arrowX=padL+(clampedScore/maxX)*plotW;
+  svg+='<line x1="'+arrowX+'" y1="'+padT+'" x2="'+arrowX+'" y2="'+(padT+plotH)+'" stroke="#E8B860" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.75"/>';
+  var ay=padT+plotH+22;
+  svg+='<polygon points="'+arrowX+','+ay+' '+(arrowX-6)+','+(ay+9)+' '+(arrowX+6)+','+(ay+9)+'" fill="#E8B860"/>';
+  svg+='<text x="'+arrowX+'" y="'+(ay+22)+'" text-anchor="middle" font-size="10" font-weight="600" fill="#E8B860" font-family="Source Sans 3,sans-serif">YOU</text>';
+  svg+='</svg>';
+  return svg;
+}
+function pctPhrase(rawPct){
+  // Always numeric. 0% is a valid output (means everyone scored same or higher).
+  // Cap to >99% to avoid the "100%" awkwardness for max scorers.
+  var label;
+  if(rawPct>=99.5)label='&gt;99%';
+  else label=Math.round(rawPct)+'%';
+  return 'Your score is <b>higher</b> than <span class="chart-pct">'+label+'</span> of people who took this test';
+}
+function pctPhraseLower(rawPct){
+  // Mirror image of pctPhrase: convert "higher than X%" to "lower than (100-X)%".
+  // Used for symmetric (no-floor-effect) scales when the user's percentile is below 50,
+  // because "lower than 75%" reads more naturally than "higher than 25%".
+  var inv=100-rawPct;
+  var label;
+  if(inv>=99.5)label='&gt;99%';
+  else label=Math.round(inv)+'%';
+  return 'Your score is <b>lower</b> than <span class="chart-pct">'+label+'</span> of people who took this test';
+}
+function renderComparison(){
+  var f1=calcRawFactor('INT'),f2=calcRawFactor('AFF'),f3=calcRawFactor('LIF'),f4=calcRawFactor('ANT');
+  var psych=calcPsychTotal();
+  var p1=percentileOf(DIST_DATA.f1_sorted,f1);
+  var p2=percentileOf(DIST_DATA.f2_sorted,f2);
+  var p3=percentileOf(DIST_DATA.f3_sorted,f3);
+  var p4=percentileOf(DIST_DATA.f4_sorted,f4);
+  var pP=percentileOf(DIST_DATA.psych_sorted,psych);
+  var charts=[
+    {title:'Charming and Deceitful Interpersonal Style',bins:DIST_DATA.f1_bins,edges:DIST_DATA.f1_edges,maxX:28,score:f1,fill:'#9B8BFF',pct:p1,scoreLabel:f1+' / 28',xStep:4,raw:DIST_DATA.f1_sorted,std:DIST_DATA.stds.f1,floorEffect:true},
+    {title:'Deficient Affective Experience',bins:DIST_DATA.f2_bins,edges:DIST_DATA.f2_edges,maxX:28,score:f2,fill:'#B197FA',pct:p2,scoreLabel:f2+' / 28',xStep:4,raw:DIST_DATA.f2_sorted,std:DIST_DATA.stds.f2,floorEffect:true},
+    {title:'Impulsive, Irresponsible and Aimless Lifestyle',bins:DIST_DATA.f3_bins,edges:DIST_DATA.f3_edges,maxX:28,score:f3,fill:'#F0A854',pct:p3,scoreLabel:f3+' / 28',xStep:4,raw:DIST_DATA.f3_sorted,std:DIST_DATA.stds.f3},
+    {title:'Reactive and Externalised Aggression',bins:DIST_DATA.f4_bins,edges:DIST_DATA.f4_edges,maxX:24,score:f4,fill:'#F87171',pct:p4,scoreLabel:f4+' / 24',xStep:4,raw:DIST_DATA.f4_sorted,std:DIST_DATA.stds.f4,floorEffect:true},
+    {title:'Total Psychopathy Score',bins:DIST_DATA.psych_bins,edges:DIST_DATA.psych_edges,maxX:110,score:psych,fill:'#E8B860',pct:pP,scoreLabel:psych+' / 108',xStep:20,raw:DIST_DATA.psych_sorted,std:DIST_DATA.stds.total}
+  ];
+  var html='<div class="compare-page">';
+  html+='<h1>How you compare</h1>';
+  html+='<p class="compare-sub">The histograms below show how the 650 people in the current sample scored.</p>';
+  charts.forEach(function(ch){
+    html+='<div class="chart-card">';
+    html+='<div class="chart-title">'+ch.title+'</div>';
+    html+=buildChartSVG({bins:ch.bins,edges:ch.edges,maxX:ch.maxX,userScore:ch.score,fillColor:ch.fill,xLabelStep:ch.xStep,rawData:ch.raw,std:ch.std});
+    var msg;
+    if(ch.floorEffect && ch.pct<50){
+      // Floor effect: scores cluster at the low end, so single-point
+      // changes in raw score swing the percentile dramatically. Don't
+      // give a precise number — explain why instead.
+      msg='Your score is no higher than average';
+    } else if(!ch.floorEffect && ch.pct<50){
+      // Symmetric scale — express low percentiles as 'lower than X%'.
+      msg=pctPhraseLower(ch.pct);
+    } else {
+      msg=pctPhrase(ch.pct);
+    }
+    html+='<div class="chart-callout">Your score: <span class="chart-score">'+ch.scoreLabel+'</span> — '+msg+'.</div>';
+    html+='</div>';
+  });
+  html+='<button class="btn-psychometrics" id="btnPsychometrics">View psychometric properties of this scale</button>';
+  html+='<button class="btn-back-bottom" id="btnBackToResults">← Back to results</button>';
+  html+='</div>';
+  return html;
+}
+function animateComparison(){/* placeholder */}
+
+
+// ===== Psychometrics: Hub + CFA + IRT subpages =====
+var FACTOR_LABELS={INT:'Charming and Deceitful Interpersonal Style',AFF:'Deficient Affective Experience',LIF:'Impulsive, Irresponsible and Aimless Lifestyle',ANT:'Reactive and Externalised Aggression'};
+
+function renderPsychometricsHub(){
+  var html='<div class="psy-hub">';
+  html+='<h1>Psychometric Properties</h1>';
+  html+='<p class="psy-hub-sub">Results from a sample of N = 650 adults.</p>';
+  html+='<button class="btn-hub" id="btnGoIRT">Item Response Theory Analysis<div class="btn-hub-desc">Item parameters, category response curves, and test information</div></button>';
+  html+='<button class="btn-hub" id="btnGoCFA">Confirmatory Factor Analysis<div class="btn-hub-desc">Model fit, factor loadings, reliability</div></button>';
+  html+='<div class="psy-hub-text">';
+  html+='<p>The sample referenced is a volunteer online sample who responded to posts requesting people take a personality inventory. Items were written to capture several conceptualisations of psychopathy, including traits pertaining to boldness as well as criminal behaviour. Several iterations of the scale were developed across three successive rounds of item writing, using a self-correcting inductive-hypothetico-deductive spiral (Cattell, 1950). The result is a preliminary 4-factor model that includes no reference to criminal history except as a downstream consequence of an innate personality disposition toward externalised aggression, as well as retaining items tapping glibness, superficial charm and social potency, which are currently scarcely represented in extant PCL-based self-report scales. </p>';
+  html+='</div>';
+  html+='<button class="btn-back-bottom" id="btnBackToCompare">\u2190 Back to comparison</button>';
+  html+='</div>';
+  return html;
+}
+
+function renderCFA(){
+  // Tabbed view: hierarchical (default) and correlated 4-factor models
+  var html='<div class="psy-page">';
+  html+='<h1>Confirmatory Factor Analysis</h1>';
+  html+='<p class="psy-note" style="text-align:center"><em>N = 650 \u00b7 Estimator: WLSMV</em></p>';
+
+  // Tab buttons
+  html+='<div class="cfa-tabs">';
+  html+='<button class="cfa-tab cfa-tab-active" data-cfa-tab="hier" id="cfaTabHier">Hierarchical (second-order)</button>';
+  html+='<button class="cfa-tab" data-cfa-tab="corr" id="cfaTabCorr">Correlated factors</button>';
+  html+='</div>';
+
+  // ===== HIERARCHICAL view =====
+  html+='<div class="cfa-view cfa-view-active" id="cfaViewHier">';
+  html+='<p class="psy-note"><strong>Hierarchical model</strong><br>27 items \u2192 4 first-order factors \u2192 1 Superordinate factor.<br>Estimator: WLSMV</p>';
+
+  // ----- Hierarchical path diagram -----
+  html+='<div class="cfa-diagram-card">';
+  html+='<div class="cfa-diagram-title">Path diagram \u2014 standardised second-order loadings</div>';
+  html+=buildHierDiagramSVG();
+  html+='</div>';
+
+  html+='<h3 class="psy-h3">Model fit \u2014 chi-square test</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Model</th><th>\u03c7\u00b2</th><th>df</th><th>p</th></tr></thead><tbody>';
+  html+='<tr><td>Baseline model</td><td>11388.459</td><td>351</td><td>\u2014</td></tr>';
+  html+='<tr><td>Factor model</td><td>906.068</td><td>320</td><td>&lt; .001</td></tr>';
+  html+='</tbody></table>';
+
+  html+='<h3 class="psy-h3">Fit indices</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Index</th><th>Value</th></tr></thead><tbody>';
+  var fitH=[
+    ['Comparative Fit Index (CFI)','0.947'],
+    ['Tucker\u2013Lewis Index (TLI)','0.942'],
+    ['Bentler\u2013Bonett Non-normed Fit Index (NNFI)','0.942'],
+    ['Bentler\u2013Bonett Normed Fit Index (NFI)','0.920'],
+    ['Parsimony Normed Fit Index (PNFI)','0.880'],
+    ['Bollen\u2019s Relative Fit Index (RFI)','0.913'],
+    ['Bollen\u2019s Incremental Fit Index (IFI)','0.947'],
+    ['Relative Noncentrality Index (RNI)','0.947'],
+    ['RMSEA','0.053'],
+    ['RMSEA 90% CI','[0.049, 0.057]'],
+    ['RMSEA p-value','0.102'],
+    ['SRMR','0.072'],
+    ['Hoelter\u2019s critical N (\u03b1 = .05)','243.035'],
+    ['Hoelter\u2019s critical N (\u03b1 = .01)','255.752'],
+    ['Goodness of Fit Index (GFI)','0.982'],
+    ['McDonald Fit Index (MFI)','0.605'],
+    ['Number of free parameters','139']
+  ];
+  fitH.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>'});
+  html+='</tbody></table>';
+
+  html+='<h3 class="psy-h3">Second-order factor loadings</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Indicator</th><th>Std. estimate</th><th>SE</th><th>z</th><th>p</th><th>95% CI</th></tr></thead><tbody>';
+  var loadings=[
+    ['Charming and Deceitful Interpersonal Style','0.575','0.043','13.47','&lt; .001','[0.492, 0.659]'],
+    ['Deficient Affective Experience','0.604','0.043','14.15','&lt; .001','[0.521, 0.688]'],
+    ['Impulsive, Irresponsible and Aimless Lifestyle','0.679','0.043','15.84','&lt; .001','[0.595, 0.763]'],
+    ['Reactive and Externalised Aggression','0.548','0.048','11.46','&lt; .001','[0.455, 0.642]']
+  ];
+  loadings.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td><td>'+r[4]+'</td><td>'+r[5]+'</td></tr>'});
+  html+='</tbody></table>';
+
+  html+='<h3 class="psy-h3">Reliability</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Factor</th><th>\u03c9 (omega)</th><th>\u03b1 (alpha)</th></tr></thead><tbody>';
+  var relH=[
+    ['Charming and Deceitful Interpersonal Style','0.890','0.859'],
+    ['Deficient Affective Experience','0.893','0.886'],
+    ['Impulsive, Irresponsible and Aimless Lifestyle','0.829','0.808'],
+    ['Reactive and Externalised Aggression','0.818','0.775'],
+    ['<strong>Total</strong>','<strong>0.934</strong>','<strong>0.884</strong>']
+  ];
+  relH.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>'});
+  html+='</tbody></table>';
+  html+='</div>';
+
+  // ===== CORRELATED view =====
+  html+='<div class="cfa-view" id="cfaViewCorr">';
+  html+='<p class="psy-note"><strong>Correlated-factors model</strong><br>27 items \u2192 4 factors with pairwise covariances freely estimated.</p>';
+  html+='<p class="cfa-estimator-note">Estimator: WLSMV</p>';
+
+  // ----- Correlated factors path diagram -----
+  html+='<div class="cfa-diagram-card">';
+  html+='<div class="cfa-diagram-title">Path diagram \u2014 standardised factor covariances</div>';
+  html+=buildCorrDiagramSVG();
+  html+='</div>';
+
+  html+='<h3 class="psy-h3">Model fit \u2014 chi-square test</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Model</th><th>\u03c7\u00b2</th><th>df</th><th>p</th></tr></thead><tbody>';
+  html+='<tr><td>Baseline model</td><td>11388.459</td><td>351</td><td>\u2014</td></tr>';
+  html+='<tr><td>Factor model</td><td>970.321</td><td>318</td><td>&lt; .001</td></tr>';
+  html+='</tbody></table>';
+
+  html+='<h3 class="psy-h3">Fit indices</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Index</th><th>Value</th></tr></thead><tbody>';
+  var fitC=[
+    ['Comparative Fit Index (CFI)','0.941'],
+    ['Tucker\u2013Lewis Index (TLI)','0.935'],
+    ['Bentler\u2013Bonett Non-normed Fit Index (NNFI)','0.935'],
+    ['Bentler\u2013Bonett Normed Fit Index (NFI)','0.915'],
+    ['Parsimony Normed Fit Index (PNFI)','0.875'],
+    ['Bollen\u2019s Relative Fit Index (RFI)','0.906'],
+    ['Bollen\u2019s Incremental Fit Index (IFI)','0.941'],
+    ['Relative Noncentrality Index (RNI)','0.941'],
+    ['RMSEA','0.056'],
+    ['RMSEA 90% CI','[0.052, 0.060]'],
+    ['RMSEA p-value','0.006'],
+    ['SRMR','0.071'],
+    ['Hoelter\u2019s critical N (\u03b1 = .05)','246.034'],
+    ['Hoelter\u2019s critical N (\u03b1 = .01)','258.949'],
+    ['Goodness of Fit Index (GFI)','0.982'],
+    ['McDonald Fit Index (MFI)','0.612'],
+    ['Number of free parameters','141']
+  ];
+  fitC.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>'});
+  html+='</tbody></table>';
+
+  html+='<h3 class="psy-h3">Factor covariances (standardized)</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Factor pair</th><th>Std. estimate</th><th>SE</th><th>z</th><th>p</th><th>95% CI</th></tr></thead><tbody>';
+  var covs=[
+    ['F1 \u2194 F2','0.369','0.038','9.730','&lt; .001','[0.295, 0.444]'],
+    ['F1 \u2194 F3','0.379','0.038','10.068','&lt; .001','[0.305, 0.453]'],
+    ['F1 \u2194 F4','0.292','0.044','6.658','&lt; .001','[0.206, 0.377]'],
+    ['F2 \u2194 F3','0.398','0.038','10.555','&lt; .001','[0.324, 0.472]'],
+    ['F2 \u2194 F4','0.315','0.046','6.910','&lt; .001','[0.225, 0.404]'],
+    ['F3 \u2194 F4','0.413','0.039','10.502','&lt; .001','[0.336, 0.490]']
+  ];
+  covs.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td><td>'+r[4]+'</td><td>'+r[5]+'</td></tr>'});
+  html+='</tbody></table>';
+  html+='<p class="psy-note" style="font-size:.78rem;margin-top:.4rem">F1 = Charming and Deceitful Interpersonal Style; F2 = Deficient Affective Experience; F3 = Impulsive, Irresponsible and Aimless Lifestyle; F4 = Reactive and Externalised Aggression.</p>';
+
+  html+='<h3 class="psy-h3">Reliability</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Factor</th><th>\u03c9 (omega)</th><th>\u03b1 (alpha)</th></tr></thead><tbody>';
+  var relC=[
+    ['Charming and Deceitful Interpersonal Style','0.890','0.859'],
+    ['Deficient Affective Experience','0.893','0.886'],
+    ['Impulsive, Irresponsible and Aimless Lifestyle','0.829','0.808'],
+    ['Reactive and Externalised Aggression','0.818','0.775'],
+    ['<strong>Total</strong>','<strong>0.934</strong>','<strong>0.884</strong>']
+  ];
+  relC.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>'});
+  html+='</tbody></table>';
+  html+='</div>';
+
+  html+='<button class="btn-back-bottom" id="btnBackToHub">\u2190 Back to psychometrics</button>';
+  html+='</div>';
+  return html;
+}
+
+// ===== Path diagram SVG builders =====
+function buildHierDiagramSVG(){
+  // Hierarchical: superordinate factor at top, four first-order factors below
+  // Loadings: F1=0.575, F2=0.604, F3=0.679, F4=0.548
+  var W=780,H=420;
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="font-family:var(--body),sans-serif">';
+  // Defs for arrowhead
+  svg+='<defs><marker id="arrH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A78BFA"/></marker></defs>';
+  // Top ellipse: superordinate
+  var topCx=W/2,topCy=60,topRx=120,topRy=34;
+  svg+='<ellipse cx="'+topCx+'" cy="'+topCy+'" rx="'+topRx+'" ry="'+topRy+'" fill="rgba(123,111,224,0.18)" stroke="#A78BFA" stroke-width="1.5"/>';
+  svg+='<text x="'+topCx+'" y="'+(topCy+5)+'" text-anchor="middle" font-size="14" font-weight="600" fill="#E8E4F4">Psychopathy</text>';
+  // Bottom four ellipses (centers spaced evenly across W)
+  var by=320,brx=82,bry=46;
+  var labels=[
+    {cx:102,name1:'Charming &amp;',name2:'Deceitful',load:'0.575'},
+    {cx:287,name1:'Deficient',name2:'Affective Exp.',load:'0.604'},
+    {cx:472,name1:'Impulsive,',name2:'Aimless Lifest.',load:'0.679'},
+    {cx:657,name1:'Reactive',name2:'Aggression',load:'0.548'}
+  ];
+  labels.forEach(function(L){
+    var cx=L.cx;
+    // line from top ellipse bottom to factor ellipse top
+    var x1=topCx,y1=topCy+topRy;
+    var x2=cx,y2=by-bry;
+    // Compute a point along the line for label (~42% from top)
+    var t=0.42;
+    var lx=x1+(x2-x1)*t,ly=y1+(y2-y1)*t;
+    svg+='<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrH)"/>';
+    // Loading label with subtle background
+    svg+='<rect x="'+(lx-22)+'" y="'+(ly-11)+'" width="44" height="18" fill="#131929" stroke="rgba(167,139,250,.4)" stroke-width="1" rx="4"/>';
+    svg+='<text x="'+lx+'" y="'+(ly+3)+'" text-anchor="middle" font-size="12" font-weight="600" fill="#E8B860">'+L.load+'</text>';
+    // factor ellipse
+    svg+='<ellipse cx="'+cx+'" cy="'+by+'" rx="'+brx+'" ry="'+bry+'" fill="rgba(155,141,255,0.12)" stroke="#9B8BFF" stroke-width="1.5"/>';
+    svg+='<text x="'+cx+'" y="'+(by-4)+'" text-anchor="middle" font-size="12" font-weight="600" fill="#E8E4F4">'+L.name1+'</text>';
+    svg+='<text x="'+cx+'" y="'+(by+12)+'" text-anchor="middle" font-size="12" font-weight="600" fill="#E8E4F4">'+L.name2+'</text>';
+  });
+  // Footnote / legend
+  svg+='<text x="'+(W/2)+'" y="'+(H-12)+'" text-anchor="middle" font-size="11" fill="rgba(180,175,210,0.7)" font-style="italic">Standardised second-order loadings shown on each path.</text>';
+  svg+='</svg>';
+  return svg;
+}
+
+function buildCorrDiagramSVG(){
+  // Correlated four-factor: square layout
+  // Top-left: F1 (Interpersonal Style); Top-right: F3 (Lifestyle)
+  // Bottom-left: F2 (Affective); Bottom-right: F4 (Antisocial)
+  // Covariances:
+  // F1<->F3 = 0.358 (top edge)
+  // F3<->F4 = 0.412 (right edge)
+  // F2<->F4 = 0.314 (bottom edge)
+  // F1<->F2 = 0.340 (left edge)
+  // F1<->F4 = 0.270 (diagonal TL-BR)
+  // F2<->F3 = 0.399 (diagonal BL-TR)
+  var W=700,H=560;
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="font-family:var(--body),sans-serif">';
+  svg+='<defs><marker id="arrCstart" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#A78BFA"/></marker><marker id="arrCend" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A78BFA"/></marker></defs>';
+  // Bubble dimensions
+  var rx=110,ry=46;
+  // Centres for square layout
+  var TLx=170,TLy=110;   // top-left  : F1 Charming/Deceitful
+  var TRx=530,TRy=110;   // top-right : F3 Lifestyle
+  var BLx=170,BLy=440;   // bottom-left: F2 Affective
+  var BRx=530,BRy=440;   // bottom-right: F4 Antisocial
+  // Helper to draw a bubble
+  function bubble(cx,cy,line1,line2){
+    var s='<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="rgba(155,141,255,0.12)" stroke="#9B8BFF" stroke-width="1.5"/>';
+    s+='<text x="'+cx+'" y="'+(cy-4)+'" text-anchor="middle" font-size="13" font-weight="600" fill="#E8E4F4">'+line1+'</text>';
+    s+='<text x="'+cx+'" y="'+(cy+14)+'" text-anchor="middle" font-size="13" font-weight="600" fill="#E8E4F4">'+line2+'</text>';
+    return s;
+  }
+  // Helper for double-headed line ending exactly at ellipse perimeters
+  // Approximate ellipse boundary with point on the line at distance equal to ellipse-radius along the line direction.
+  function ellipsePoint(cx,cy,tx,ty){
+    var dx=tx-cx,dy=ty-cy;
+    // parametric: scale (dx/rx)^2 + (dy/ry)^2 = 1 along ray
+    var s=1/Math.sqrt((dx*dx)/(rx*rx)+(dy*dy)/(ry*ry));
+    return {x:cx+dx*s,y:cy+dy*s};
+  }
+  function doubleArrow(c1x,c1y,c2x,c2y,label,labelOffsetX,labelOffsetY){
+    var p1=ellipsePoint(c1x,c1y,c2x,c2y);
+    var p2=ellipsePoint(c2x,c2y,c1x,c1y);
+    // small inset so arrowheads sit on perimeter
+    var s='<line x1="'+p1.x.toFixed(1)+'" y1="'+p1.y.toFixed(1)+'" x2="'+p2.x.toFixed(1)+'" y2="'+p2.y.toFixed(1)+'" stroke="#A78BFA" stroke-width="1.5" marker-start="url(#arrCstart)" marker-end="url(#arrCend)"/>';
+    var mx=(p1.x+p2.x)/2+(labelOffsetX||0);
+    var my=(p1.y+p2.y)/2+(labelOffsetY||0);
+    s+='<rect x="'+(mx-22)+'" y="'+(my-11)+'" width="44" height="18" fill="#131929" stroke="rgba(167,139,250,.4)" stroke-width="1" rx="4"/>';
+    s+='<text x="'+mx+'" y="'+(my+3)+'" text-anchor="middle" font-size="12" font-weight="600" fill="#E8B860">'+label+'</text>';
+    return s;
+  }
+  // Draw diagonals first (so they sit behind bubbles in z order)
+  svg+=doubleArrow(TLx,TLy,BRx,BRy,'0.292',-30,0);  // F1 <-> F4
+  svg+=doubleArrow(BLx,BLy,TRx,TRy,'0.398',30,0);   // F2 <-> F3
+  // Edges
+  svg+=doubleArrow(TLx,TLy,TRx,TRy,'0.379',0,-12);  // F1 <-> F3 (top)
+  svg+=doubleArrow(TRx,TRy,BRx,BRy,'0.413',12,0);   // F3 <-> F4 (right)
+  svg+=doubleArrow(BLx,BLy,BRx,BRy,'0.315',0,12);   // F2 <-> F4 (bottom)
+  svg+=doubleArrow(TLx,TLy,BLx,BLy,'0.369',-12,0);  // F1 <-> F2 (left)
+  // Bubbles on top
+  svg+=bubble(TLx,TLy,'Charming &amp;','Deceitful');
+  svg+=bubble(TRx,TRy,'Impulsive,','Aimless Lifestyle');
+  svg+=bubble(BLx,BLy,'Deficient','Affective Exp.');
+  svg+=bubble(BRx,BRy,'Reactive','Aggression');
+  // Footnote
+  svg+='<text x="'+(W/2)+'" y="'+(H-14)+'" text-anchor="middle" font-size="11" fill="rgba(180,175,210,0.7)" font-style="italic">Standardised factor covariances shown on each path. Estimator: WLSMV.</text>';
+  svg+='</svg>';
+  return svg;
+}
+
+// Graded Response Model: P(Y >= k) = sigmoid(a*(theta - b_{k-1}))
+function sigmoid(x){return 1/(1+Math.exp(-x))}
+function grmCategoryProbs(theta,a,bs){
+  // bs = [b1, b2, b3, b4] for 5-category response
+  var psum=[1];
+  for(var k=0;k<bs.length;k++){psum.push(sigmoid(a*(theta-bs[k])))}
+  psum.push(0);
+  // P(Y=k) = P(Y>=k) - P(Y>=k+1)
+  var probs=[];
+  for(var i=0;i<5;i++)probs.push(psum[i]-psum[i+1]);
+  return probs;
+}
+
+function buildICCSVG(item){
+  // Plot 5 category response curves over theta in [-5, 5]
+  var W=400,H=200,padL=38,padR=12,padT=12,padB=36;
+  var plotW=W-padL-padR,plotH=H-padT-padB;
+  var thetaMin=-5,thetaMax=5;
+  var colors=['#7B6FE0','#A78BFA','#5DCFD9','#F0A854','#F87171']; // categories 0..4 mapped to Y=1..5
+  var labels=['No extent','Slight','Moderate','Considerable','Complete'];
+  var samples=80;
+  var bs=[item.b1,item.b2,item.b3,item.b4];
+  // Pre-compute curves
+  var curves=[[],[],[],[],[]];
+  for(var s=0;s<=samples;s++){
+    var theta=thetaMin+(thetaMax-thetaMin)*(s/samples);
+    var probs=grmCategoryProbs(theta,item.a,bs);
+    var xPx=padL+((theta-thetaMin)/(thetaMax-thetaMin))*plotW;
+    for(var k=0;k<5;k++){
+      var yPx=padT+plotH-probs[k]*plotH;
+      curves[k].push({x:xPx,y:yPx});
+    }
+  }
+  var svg='<svg class="chart-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">';
+  // Y grid
+  for(var t=0;t<=4;t++){
+    var yVal=t*0.25,yPos=padT+plotH-yVal*plotH;
+    svg+='<line x1="'+padL+'" y1="'+yPos+'" x2="'+(W-padR)+'" y2="'+yPos+'" stroke="rgba(255,255,255,0.05)"/>';
+    svg+='<text x="'+(padL-6)+'" y="'+(yPos+3)+'" text-anchor="end" font-size="9" fill="rgba(180,175,210,0.6)" font-family="Source Sans 3">'+yVal.toFixed(2)+'</text>';
+  }
+  // X axis
+  svg+='<line x1="'+padL+'" y1="'+(padT+plotH)+'" x2="'+(W-padR)+'" y2="'+(padT+plotH)+'" stroke="rgba(255,255,255,0.25)"/>';
+  for(var x=thetaMin;x<=thetaMax;x++){
+    var xPos=padL+((x-thetaMin)/(thetaMax-thetaMin))*plotW;
+    svg+='<line x1="'+xPos+'" y1="'+(padT+plotH)+'" x2="'+xPos+'" y2="'+(padT+plotH+4)+'" stroke="rgba(255,255,255,0.25)"/>';
+    svg+='<text x="'+xPos+'" y="'+(padT+plotH+15)+'" text-anchor="middle" font-size="9" fill="rgba(180,175,210,0.65)" font-family="Source Sans 3">'+x+'</text>';
+  }
+  // Axis labels
+  svg+='<text x="'+(padL+plotW/2)+'" y="'+(H-4)+'" text-anchor="middle" font-size="11" fill="rgba(180,175,210,0.8)" font-family="Cambria, \'Times New Roman\', Georgia, serif" font-style="italic">\u03b8</text>';
+  svg+='<text x="10" y="'+(padT+plotH/2)+'" text-anchor="middle" font-size="10" fill="rgba(180,175,210,0.7)" font-family="Source Sans 3" font-style="italic" transform="rotate(-90 10 '+(padT+plotH/2)+')">P(Y = k)</text>';
+  // Curves
+  for(var k=0;k<5;k++){
+    var path='';
+    for(var i=0;i<curves[k].length;i++){
+      path+=(i===0?'M':'L')+curves[k][i].x.toFixed(2)+' '+curves[k][i].y.toFixed(2)+' ';
+    }
+    svg+='<path d="'+path+'" stroke="'+colors[k]+'" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round" opacity="0.95"/>';
+  }
+  svg+='</svg>';
+  return svg;
+}
+
+
+function buildTIFSVG(infoArr, peakLabel){
+  // infoArr = 101 values from theta=-5 to +5 step 0.1
+  // SE(theta) = 1/sqrt(I(theta)), capped at 1.0 for display
+  var W=420,H=240,padL=42,padR=44,padT=14,padB=40;
+  var plotW=W-padL-padR,plotH=H-padT-padB;
+  var thetaMin=-5,thetaMax=5;
+  var infoMax=0;
+  for(var i=0;i<infoArr.length;i++)if(infoArr[i]>infoMax)infoMax=infoArr[i];
+  // Round info y-axis up to a clean value
+  var infoYMax=Math.ceil(infoMax/5)*5;
+  if(infoYMax<infoMax)infoYMax=infoMax;
+  var seYMax=1.0;
+  var svg='<svg class="chart-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">';
+  // Y-axis grid + labels (left = info, right = SE)
+  var nT=4;
+  for(var t=0;t<=nT;t++){
+    var frac=t/nT;
+    var yPos=padT+plotH-frac*plotH;
+    svg+='<line x1="'+padL+'" y1="'+yPos+'" x2="'+(W-padR)+'" y2="'+yPos+'" stroke="rgba(255,255,255,0.05)"/>';
+    // Left axis: info
+    var infoVal=(infoYMax*frac);
+    svg+='<text x="'+(padL-6)+'" y="'+(yPos+3)+'" text-anchor="end" font-size="9" fill="rgba(180,175,210,0.65)" font-family="Source Sans 3">'+infoVal.toFixed(infoYMax<10?1:0)+'</text>';
+    // Right axis: SE
+    var seVal=(seYMax*frac);
+    svg+='<text x="'+(W-padR+6)+'" y="'+(yPos+3)+'" text-anchor="start" font-size="9" fill="rgba(180,175,210,0.55)" font-family="Source Sans 3">'+seVal.toFixed(2)+'</text>';
+  }
+  // X-axis
+  svg+='<line x1="'+padL+'" y1="'+(padT+plotH)+'" x2="'+(W-padR)+'" y2="'+(padT+plotH)+'" stroke="rgba(255,255,255,0.25)"/>';
+  for(var x=thetaMin;x<=thetaMax;x++){
+    var xPos=padL+((x-thetaMin)/(thetaMax-thetaMin))*plotW;
+    svg+='<line x1="'+xPos+'" y1="'+(padT+plotH)+'" x2="'+xPos+'" y2="'+(padT+plotH+4)+'" stroke="rgba(255,255,255,0.25)"/>';
+    svg+='<text x="'+xPos+'" y="'+(padT+plotH+15)+'" text-anchor="middle" font-size="9" fill="rgba(180,175,210,0.65)" font-family="Source Sans 3">'+x+'</text>';
+  }
+  svg+='<text x="'+(padL+plotW/2)+'" y="'+(H-3)+'" text-anchor="middle" font-size="11" fill="rgba(180,175,210,0.8)" font-family="Cambria, \'Times New Roman\', Georgia, serif" font-style="italic">\u03b8</text>';
+  // Axis titles (rotated)
+  svg+='<text x="10" y="'+(padT+plotH/2)+'" text-anchor="middle" font-size="10" fill="rgba(180,175,210,0.7)" font-family="Source Sans 3" transform="rotate(-90 10 '+(padT+plotH/2)+')">Information</text>';
+  svg+='<text x="'+(W-8)+'" y="'+(padT+plotH/2)+'" text-anchor="middle" font-size="10" fill="rgba(180,175,210,0.6)" font-family="Cambria, \'Times New Roman\', Georgia, serif" transform="rotate(90 '+(W-8)+' '+(padT+plotH/2)+')">SE(\u03b8)</text>';
+  // Information curve (solid)
+  var infoPath='';
+  for(var i=0;i<infoArr.length;i++){
+    var th=thetaMin+i*0.1;
+    var xPx=padL+((th-thetaMin)/(thetaMax-thetaMin))*plotW;
+    var yPx=padT+plotH-(infoArr[i]/infoYMax)*plotH;
+    infoPath+=(i===0?'M':'L')+xPx.toFixed(2)+' '+yPx.toFixed(2)+' ';
+  }
+  svg+='<path d="'+infoPath+'" stroke="#9B8BFF" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>';
+  // SE curve (dashed, capped at seYMax for display)
+  var sePath='';
+  for(var j=0;j<infoArr.length;j++){
+    var info=infoArr[j];
+    var se=info>0?1/Math.sqrt(info):seYMax;
+    if(se>seYMax)se=seYMax;
+    var th2=thetaMin+j*0.1;
+    var xPx2=padL+((th2-thetaMin)/(thetaMax-thetaMin))*plotW;
+    var yPx2=padT+plotH-(se/seYMax)*plotH;
+    sePath+=(j===0?'M':'L')+xPx2.toFixed(2)+' '+yPx2.toFixed(2)+' ';
+  }
+  svg+='<path d="'+sePath+'" stroke="rgba(180,175,210,0.55)" stroke-width="1" stroke-dasharray="4 3" fill="none" stroke-linejoin="round" stroke-linecap="round"/>';
+  // Peak annotation
+  if(peakLabel){
+    svg+='<text x="'+(W-padR-6)+'" y="'+(padT+12)+'" text-anchor="end" font-size="10" fill="rgba(220,215,235,0.85)" font-family="Source Sans 3" font-weight="600">'+peakLabel+'</text>';
+  }
+  svg+='</svg>';
+  return svg;
+}
+
+function renderIRT(){
+  var html='<div class="psy-page">';
+  html+='<h1>Item Response Theory Analysis</h1>';
+
+  // Tab buttons
+  html+='<div class="cfa-tabs">';
+  html+='<button class="cfa-tab cfa-tab-active" data-irt-tab="icc" id="irtTabICC">Character response curves</button>';
+  html+='<button class="cfa-tab" data-irt-tab="tif" id="irtTabTIF">Test information curves</button>';
+  html+='</div>';
+
+  // ===== ICC view (default) =====
+  html+='<div class="cfa-view cfa-view-active" id="irtViewICC">';
+  html+='<p class="psy-note psy-note-lg">I analysed the scale using the graded response model (Samejima, 1969). Separate unidimensional models were fitted for each factor using the <em>mirt</em> package in R.</p>';
+  html+='<p class="psy-note">Curves are colored by category:</p><ul class="irt-legend-list"><li><span class="lgnd-sw" style="background:#7B6FE0"></span> To no extent</li><li><span class="lgnd-sw" style="background:#A78BFA"></span> To a slight extent</li><li><span class="lgnd-sw" style="background:#5DCFD9"></span> To a moderate extent</li><li><span class="lgnd-sw" style="background:#F0A854"></span> To a considerable extent</li><li><span class="lgnd-sw" style="background:#F87171"></span> To a complete extent</li></ul>';
+
+  IRT_PARAMS.forEach(function(it){
+    html+='<div class="irt-item">';
+    html+='<div class="irt-item-text">'+it.text+'</div>';
+    html+='<div class="irt-item-params"><span class="irt-fac-name">'+FACTOR_LABELS[it.f]+'</span><span class="irt-pp"><em>a</em> '+it.a.toFixed(2)+', <em>b</em>\u2081 '+it.b1.toFixed(2)+', <em>b</em>\u2082 '+it.b2.toFixed(2)+', <em>b</em>\u2083 '+it.b3.toFixed(2)+', <em>b</em>\u2084 '+it.b4.toFixed(2)+'</span></div>';
+    html+=buildICCSVG(it);
+    html+='</div>';
+  });
+  html+='</div>';
+
+  // ===== TIF view =====
+  html+='<div class="cfa-view" id="irtViewTIF">';
+    html+='<p class="psy-note"><span class="tif-legend-line"></span> Test information &nbsp;&nbsp;<span class="tif-legend-line dashed"></span> Standard error of <span class="theta-glyph">\u03b8</span></p>';
+
+  html+='<h3 class="psy-h3">Peak values</h3>';
+  html+='<table class="psy-table"><thead><tr><th>Factor</th><th>Items</th><th>Peak TIF</th><th>Min SE(<span class="theta-glyph">\u03b8</span>)</th></tr></thead><tbody>';
+  var tifRows=[
+    ['Charming and Deceitful Interpersonal Style','7','9.11','0.331'],
+    ['Deficient Affective Experience','7','12.80','0.279'],
+    ['Impulsive, Irresponsible and Aimless Lifestyle','7','6.24','0.400'],
+    ['Reactive and Externalised Aggression','6','6.60','0.389'],
+    ['<strong>Total scale</strong>','<strong>27</strong>','<strong>34.45</strong>','<strong>0.170</strong>']
+  ];
+  tifRows.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td></tr>'});
+  html+='</tbody></table>';
+
+  var tifFactors=[
+    ['INT','Charming and Deceitful Interpersonal Style','7','9.11'],
+    ['AFF','Deficient Affective Experience','7','12.80'],
+    ['LIF','Impulsive, Irresponsible and Aimless Lifestyle','7','6.24'],
+    ['ANT','Reactive and Externalised Aggression','6','6.60'],
+    ['TOT','Total scale (all 27 items)','27','34.45']
+  ];
+  tifFactors.forEach(function(t){
+    html+='<div class="tif-chart-card">';
+    html+='<div class="tif-chart-title">'+t[1]+'</div>';
+    html+='<div class="tif-chart-meta">'+t[2]+' items \u00b7 Peak TIF = '+t[3]+'</div>';
+    html+=buildTIFSVG(TIF_DATA[t[0]],'Peak I = '+t[3]);
+    html+='</div>';
+  });
+  html+='</div>';
+
+  html+='<button class="btn-back-bottom" id="btnBackToHub">\u2190 Back to psychometrics</button>';
+  html+='</div>';
+  return html;
+}
+
+function attachListeners(){
+  var bs=document.getElementById('btnStart');
+  if(bs)bs.addEventListener('click',function(){state.currentPage=1;render()});
+  var bc=document.getElementById('btnCompare');
+  if(bc)bc.addEventListener('click',function(){state.currentPage=COMPARISON_PAGE;render();window.scrollTo(0,0)});
+  var bbr=document.getElementById('btnBackToResults');
+  if(bbr)bbr.addEventListener('click',function(){state.currentPage=RESULTS_PAGE;render();window.scrollTo(0,0)});
+  var bpsy=document.getElementById('btnPsychometrics');
+  if(bpsy)bpsy.addEventListener('click',function(){state.currentPage=PSYCHOMETRICS_PAGE;render();window.scrollTo(0,0)});
+  var bbpsy=document.getElementById('btnBackToCompare');
+  if(bbpsy)bbpsy.addEventListener('click',function(){state.currentPage=COMPARISON_PAGE;render();window.scrollTo(0,0)});
+  var bgcfa=document.getElementById('btnGoCFA');
+  if(bgcfa)bgcfa.addEventListener('click',function(){state.currentPage=CFA_PAGE;render();window.scrollTo(0,0)});
+  var bgirt=document.getElementById('btnGoIRT');
+  if(bgirt)bgirt.addEventListener('click',function(){state.currentPage=IRT_PAGE;render();window.scrollTo(0,0)});
+  var bbhub=document.getElementById('btnBackToHub');
+  if(bbhub)bbhub.addEventListener('click',function(){state.currentPage=PSYCHOMETRICS_PAGE;render();window.scrollTo(0,0)});
+  // CFA tab switching
+  document.querySelectorAll('.cfa-tab[data-cfa-tab]').forEach(function(tab){tab.addEventListener('click',function(){
+    var which=tab.getAttribute('data-cfa-tab');
+    document.querySelectorAll('.cfa-tab[data-cfa-tab]').forEach(function(t){t.classList.toggle('cfa-tab-active',t.getAttribute('data-cfa-tab')===which)});
+    document.querySelectorAll('#cfaViewHier,#cfaViewCorr').forEach(function(v){v.classList.remove('cfa-view-active')});
+    var target=document.getElementById(which==='hier'?'cfaViewHier':'cfaViewCorr');
+    if(target)target.classList.add('cfa-view-active');
+  })});
+  // IRT tab switching
+  document.querySelectorAll('.cfa-tab[data-irt-tab]').forEach(function(tab){tab.addEventListener('click',function(){
+    var which=tab.getAttribute('data-irt-tab');
+    document.querySelectorAll('.cfa-tab[data-irt-tab]').forEach(function(t){t.classList.toggle('cfa-tab-active',t.getAttribute('data-irt-tab')===which)});
+    document.querySelectorAll('#irtViewICC,#irtViewTIF').forEach(function(v){v.classList.remove('cfa-view-active')});
+    var target=document.getElementById(which==='icc'?'irtViewICC':'irtViewTIF');
+    if(target)target.classList.add('cfa-view-active');
+    window.scrollTo(0,0);
+  })});
+  var bg=document.getElementById('btnGotIt');
+  if(bg)bg.addEventListener('click',function(){state.slideDir='fwd';if(!state.startTime)state.startTime=Date.now();state.pageStartTimes[ITEM_START]=Date.now();state.currentPage=ITEM_START;render()});
+  var beb=document.getElementById('btnExplainerBack');
+  if(beb)beb.addEventListener('click',function(){state.slideDir='bwd';state.currentPage=0;render()});
+  var bds=document.getElementById('btnDemoSubmit');
+  if(bds)bds.addEventListener('click',function(){submitFinal()});
+  var demoAge=document.getElementById('demoAge');
+  var demoCountry=document.getElementById('demoCountry');
+  if(demoAge)demoAge.addEventListener('input',function(){var e=document.getElementById('demoError');if(e)e.classList.remove('visible')});
+  if(demoCountry)demoCountry.addEventListener('change',function(){var e=document.getElementById('demoError');if(e)e.classList.remove('visible')});
+  var dg=document.getElementById('demoGender');if(dg)dg.addEventListener('change',function(){var e=document.getElementById('demoError');if(e)e.classList.remove('visible')});
+  var bb=document.getElementById('btnBack');
+  if(bb)bb.addEventListener('click',function(){
+    recordPageTime();state.slideDir='bwd';
+    if(state.currentPage===ITEM_START){state.currentPage=1;render();return}
+    if(state.currentPage===DEMOGRAPHICS_PAGE){state.currentPage=DEMOGRAPHICS_PAGE-1;state.pageStartTimes[state.currentPage]=Date.now();render();return}
+    state.currentPage--;state.pageStartTimes[state.currentPage]=Date.now();render();
+  });
+  var bn=document.getElementById('btnNext');
+  if(bn)bn.addEventListener('click',function(){
+    var p=state.currentPage;
+    // Section 1 items (the only test section)
+    if(p>=ITEM_START&&p<DEMOGRAPHICS_PAGE){
+      if(!validateItem(p-ITEM_START,S1_ITEMS))return;
+      if(p===DEMOGRAPHICS_PAGE-1){recordPageTime();submitSection1();return}
+    }
+    recordPageTime();state.slideDir='fwd';state.currentPage++;state.pageStartTimes[state.currentPage]=Date.now();render();
+  });
+  document.querySelectorAll('.scale-btn').forEach(function(opt){
+    opt.addEventListener('click',function(){
+      var itemId=opt.dataset.item,value=parseInt(opt.dataset.value);
+      if(state.responses[itemId]===value){delete state.responses[itemId];opt.classList.remove('selected');return}
+      state.responses[itemId]=value;
+      document.querySelectorAll('.scale-btn[data-item="'+itemId+'"]').forEach(function(o){o.classList.remove('selected')});
+      opt.classList.add('selected');
+      var err=document.getElementById('itemError');if(err)err.classList.remove('visible');
+    });
+  });
+}
+
+function recordPageTime(){var st=state.pageStartTimes[state.currentPage];if(st)state.pageTimes[state.currentPage]=Math.round((Date.now()-st)/100)/10;state.pageStartTimes[state.currentPage]=Date.now()}
+
+function validateItem(idx,items){
+  var item=items[idx];
+  if(state.responses[item.id]===undefined){
+    var err=document.getElementById('itemError');
+    if(err){err.textContent='Please answer before continuing.';err.classList.add('visible')}
+    return false;
+  }
+  return true;
+}
+
+function buildPayload(items,section){
+  var totalTime=Math.round((Date.now()-state.startTime)/100)/10;
+  var itemTimes={};
+  var startPage=ITEM_START;
+  items.forEach(function(item,i){itemTimes[item.id]=state.pageTimes[startPage+i]||0});
+  var responses={};
+  items.forEach(function(item){if(state.responses[item.id]!==undefined)responses[item.id]=state.responses[item.id]});
+  return {respondent_id:state.respondentId,section:section,total_time_seconds:totalTime,ip_address:state.ipData.ip||'',ip_country:state.ipData.country||'',ip_city:state.ipData.city||'',isp:state.ipData.isp||'',is_vpn_or_proxy:state.ipData.is_vpn?'YES':'NO',responses:responses,item_times:itemTimes};
+}
+
+function submitToSheet(payload,callback){
+  if(!GOOGLE_SCRIPT_URL||GOOGLE_SCRIPT_URL==='YOUR_GOOGLE_SCRIPT_URL_HERE'){callback();return}
+  try{
+    var iframe=document.createElement('iframe');iframe.name='sf_'+Date.now();iframe.style.display='none';document.body.appendChild(iframe);
+    var form=document.createElement('form');form.method='POST';form.action=GOOGLE_SCRIPT_URL;form.target=iframe.name;form.style.display='none';
+    var input=document.createElement('input');input.type='hidden';input.name='payload';input.value=JSON.stringify(payload);
+    form.appendChild(input);document.body.appendChild(form);form.submit();
+    setTimeout(function(){try{document.body.removeChild(form);document.body.removeChild(iframe)}catch(e){}callback()},2000);
+  }catch(err){callback()}
+}
+
+// Order in which response columns appear in the Google Sheet.
+// Validity items (VAL prefix) are appended at the end.
+var FACET_ORDER=['GLIB','LIE','EMPATHY','REMORSE','IMPULSIVE','IRRESPONSIBLE','LACKSGOALS','POOR','ADULT'];
+function _idPrefix(id){var m=id.match(/^[A-Z]+/);return m?m[0]:id}
+function _idNum(id){var m=id.match(/(\d+)$/);return m?parseInt(m[1],10):0}
+function buildOrderedPayload(section,demos){
+  // total_time_seconds = first item shown -> last item answered. Excludes demographics.
+  var totalTime=(state.s1EndTime&&state.startTime)?Math.round((state.s1EndTime-state.startTime)/100)/10:0;
+  var p={};
+  p.timestamp=new Date().toISOString();
+  p.respondent_id=state.respondentId;
+  p.section=section;
+  p.total_time_seconds=totalTime;
+  p.ip_address=state.ipData.ip||'';
+  p.ip_country=state.ipData.country||'';
+  p.ip_city=state.ipData.city||'';
+  p.isp=state.ipData.isp||'';
+  p.is_vpn_or_proxy=state.ipData.is_vpn?'YES':'NO';
+  p.demo_age=demos&&demos.age!==undefined?demos.age:'';
+  p.demo_gender=demos?demos.gender||'':'';
+  p.demo_country=demos?demos.country||'':'';
+  p.demo_accurate=demos?demos.accurate||'':'';
+  p.demo_consent=demos?demos.consent||'':'';
+  // Response columns: grouped by facet (GLIB, GRANDIOSE, ...), numeric within each
+  for(var fi=0;fi<FACET_ORDER.length;fi++){
+    var prefix=FACET_ORDER[fi];
+    var group=S1_ITEMS.filter(function(it){return _idPrefix(it.id)===prefix});
+    group.sort(function(a,b){return _idNum(a.id)-_idNum(b.id)});
+    group.forEach(function(it){p[it.id]=state.responses[it.id]!==undefined?state.responses[it.id]:''});
+  }
+  // Time columns: in TEST ORDER (not facet-grouped), prefixed with 'Time'
+  S1_ITEMS.forEach(function(item,i){p['Time'+item.id]=state.pageTimes[ITEM_START+i]||0});
+  p.auth_token=generateToken(state.respondentId);
+  return p;
+}
+function submitSection1(){
+  // Capture end-of-test time so total_time_seconds reflects time-on-test only.
+  if(!state.s1EndTime)state.s1EndTime=Date.now();
+  state.slideDir='fwd';
+  state.currentPage=DEMOGRAPHICS_PAGE;
+  state.pageStartTimes[DEMOGRAPHICS_PAGE]=Date.now();
+  render();
+}
+
+function submitFinal(){
+  var ageEl=document.getElementById('demoAge');
+  var genderEl=document.getElementById('demoGender');
+  var countryEl=document.getElementById('demoCountry');
+  var accurateEl=document.getElementById('demoAccurate');
+  var consentEl=document.getElementById('demoConsent');
+  var age=ageEl?ageEl.value.trim():'';
+  var gender=genderEl?genderEl.value:'';
+  var country=countryEl?countryEl.value:'';
+  // Optional checkboxes - send YES/NO based on checked state (always a value, never blank)
+  var accurate=(accurateEl&&accurateEl.checked)?'YES':'NO';
+  var consent=(consentEl&&consentEl.checked)?'YES':'NO';
+  var errEl=document.getElementById('demoError');
+  if(!age||isNaN(parseInt(age))||parseInt(age)<13||parseInt(age)>120){
+    if(errEl){errEl.textContent='Please enter a valid age (13\u2013120).';errEl.classList.add('visible')}return;
+  }
+  if(!gender){
+    if(errEl){errEl.textContent='Please select your gender.';errEl.classList.add('visible')}return;
+  }
+  if(!country){
+    if(errEl){errEl.textContent='Please select your country.';errEl.classList.add('visible')}return;
+  }
+  if(errEl)errEl.classList.remove('visible');
+  var overlay=document.getElementById('submitting');
+  document.getElementById('spinnerText').textContent='Calculating scores\u2026';
+  overlay.classList.add('visible');
+  var payload=buildOrderedPayload('complete',{age:parseInt(age),gender:gender,country:country,accurate:accurate,consent:consent});
+  submitToSheet(payload,function(){
+    overlay.classList.remove('visible');
+    state.currentPage=RESULTS_PAGE;
+    render();
+  });
+}
+
+
+
+// Enter advances to the next page. Skip textareas; let already-focused buttons handle Enter natively.
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter'||e.shiftKey||e.ctrlKey||e.metaKey||e.altKey)return;
+  var tag=(e.target&&e.target.tagName)||'';
+  if(tag==='TEXTAREA')return;
+  if(tag==='BUTTON')return;
+  var primaryIds=['btnStart','btnGotIt','btnNext','btnDemoSubmit'];
+  for(var i=0;i<primaryIds.length;i++){
+    var btn=document.getElementById(primaryIds[i]);
+    if(btn){e.preventDefault();btn.click();return}
+  }
+});
+
+render();
+</script>
+
+
+</body></html>
