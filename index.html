@@ -556,11 +556,11 @@ function renderResults(){
   var pcts=sc.pcts,raws=sc.raws,maxes=sc.maxes;
   function dimCard(key){var dim=DIMS[key];return '<div class="dim-card"><div class="dim-header"><span class="dim-name">'+dim.name+'</span><span class="dim-pct">'+raws[key]+' / '+maxes[key]+'</span></div><div class="dim-desc">'+dim.desc+'</div><div class="dim-bar-track"><div class="dim-bar-fill '+dim.barClass+'" id="bar-'+key+'" style="width:0%"></div></div></div>'}
   var html='<div class="results"><h1>Your Results</h1><p class="results-sub">Here\u2019s how you scored.</p>';
-  html+='<div class="core-group"><div class="core-label">The Interpersonal/Affective \u201cCore\u201d of Psychopathy.</div>';
+  html+='<div class="core-group"><div class="core-label">The Interpersonal and Affective \u201cCore\u201d of Psychopathy.</div>';
   html+=dimCard('INT');
   html+=dimCard('AFF');
   html+='</div>';
-  html+='<div class="core-group shell-group"><div class="core-label">The Disinhibited Behavioural \u201cShell\u201d of Psychopathy.</div>';
+  html+='<div class="core-group shell-group"><div class="core-label">The Disinhibited Behavioural Features.</div>';
   html+=dimCard('LIF');
   html+=dimCard('ANT');
   html+='</div>';
