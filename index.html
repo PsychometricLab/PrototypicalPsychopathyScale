@@ -147,9 +147,9 @@ body.on-results{overflow-x:hidden;overflow-y:auto;overscroll-behavior:auto;touch
 .results h1{font-family:var(--heading);font-size:2rem;font-weight:700;text-align:center;margin-bottom:.5rem;color:var(--text)}
 .results-sub{text-align:center;font-size:1rem;color:var(--text-muted);font-weight:300;margin-bottom:2.5rem;line-height:1.6}
 .dim-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 1.75rem;margin-bottom:.85rem;box-shadow:var(--shadow-sm)}
-.dim-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
-.dim-name{font-family:var(--heading);font-size:1.05rem;font-weight:600}
-.dim-pct{font-size:1.05rem;font-weight:700;color:var(--primary)}
+.dim-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.85rem;margin-bottom:.4rem}
+.dim-name{font-family:var(--heading);font-size:1.05rem;font-weight:600;line-height:1.3;text-wrap:balance;flex:1;min-width:0}
+.dim-pct{font-size:1.05rem;font-weight:700;color:var(--primary);white-space:nowrap;flex-shrink:0;line-height:1.3}
 .dim-desc{font-size:.78rem;color:var(--text-muted);line-height:1.5;margin-bottom:.85rem}
 .dim-bar-track{height:6px;background:rgba(255,255,255,.07);border-radius:100px;overflow:hidden}
 .dim-bar-fill{height:100%;border-radius:100px;transition:width 1.2s cubic-bezier(.25,.46,.45,.94)}
@@ -184,7 +184,11 @@ body.on-results{overflow-x:hidden;overflow-y:auto;overscroll-behavior:auto;touch
   .tri-num{width:30px;height:30px;font-size:.78rem}
   .results{padding:1.5rem 1rem 3rem}
   .results h1{font-size:1.6rem}
-  .dim-card{padding:1.1rem .9rem}.dim-name{font-size:.95rem}
+  .dim-card{padding:1rem .9rem}
+  .dim-header{gap:.6rem;margin-bottom:.35rem}
+  .dim-name{font-size:.92rem;line-height:1.25}
+  .dim-pct{font-size:.92rem}
+  .dim-desc{font-size:.76rem;line-height:1.45;margin-bottom:.7rem}
 }
 @media(max-width:380px){
   .hero h1{font-size:1.6rem}
@@ -193,6 +197,10 @@ body.on-results{overflow-x:hidden;overflow-y:auto;overscroll-behavior:auto;touch
   .scale-btn{padding:.5rem .75rem}
   .scale-lbl{font-size:.82rem}
   .tri-num{width:26px;height:26px;font-size:.72rem}
+  .dim-card{padding:.9rem .8rem}
+  .dim-name{font-size:.88rem}
+  .dim-pct{font-size:.88rem}
+  .core-group{padding:1rem .7rem .7rem}
 }
 
 /* Likert colors */
@@ -441,7 +449,7 @@ function render(){
 }
 
 function renderWelcome(){
-  return '<div class="hero"><div class="hero-eyebrow">Psychopathy Assessment</div><div class="hero-rule"></div><h1>Prototypical Psychopathy Scale</h1><div class="hero-divider"></div><div class="hero-card"><p class="hero-sub">An empirically validated four-factor psychopathy scale.</p><p class="hero-sub" style="margin-top:0.5rem;font-size:.93rem">Answer based on how you have been most of the time, in most situations, over the past 5 years.</p><p class="hero-sub" style="margin-top:0.2rem;font-size:.93rem">Be honest, take your time, and have fun.</p></div><div class="hero-meta"><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>27 questions</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>~3 minutes</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Free results</div></div><button class="btn-hero" id="btnStart">Begin Assessment</button></div>';
+  return '<div class="hero"><div class="hero-eyebrow">Psychopathy Assessment</div><div class="hero-rule"></div><h1>Prototypical Psychopathy Scale</h1><div class="hero-divider"></div><div class="hero-card"><p class="hero-sub">An empirically validated, four-factor<br>measure of psychopathy.</p><p class="hero-sub" style="margin-top:0.5rem;font-size:.93rem">Answer based on how you have been most of the time, in most situations, over the past 5 years.</p><p class="hero-sub" style="margin-top:0.2rem;font-size:.93rem"></p></div><div class="hero-meta"><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>27 questions</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>~3 minutes</div><div class="hero-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Free results</div></div><button class="btn-hero" id="btnStart">Begin Assessment</button></div>';
 }
 
 function renderExplainer(){
@@ -556,7 +564,7 @@ function renderResults(){
   var pcts=sc.pcts,raws=sc.raws,maxes=sc.maxes;
   function dimCard(key){var dim=DIMS[key];return '<div class="dim-card"><div class="dim-header"><span class="dim-name">'+dim.name+'</span><span class="dim-pct">'+raws[key]+' / '+maxes[key]+'</span></div><div class="dim-desc">'+dim.desc+'</div><div class="dim-bar-track"><div class="dim-bar-fill '+dim.barClass+'" id="bar-'+key+'" style="width:0%"></div></div></div>'}
   var html='<div class="results"><h1>Your Results</h1><p class="results-sub">Here\u2019s how you scored.</p>';
-  html+='<div class="core-group"><div class="core-label">The Interpersonal and Affective \u201cCore\u201d of Psychopathy.</div>';
+  html+='<div class="core-group"><div class="core-label">The \u201cCore\u201d of Psychopathy.</div>';
   html+=dimCard('INT');
   html+=dimCard('AFF');
   html+='</div>';
@@ -752,7 +760,7 @@ function renderPsychometricsHub(){
   html+='<button class="btn-hub" id="btnGoIRT">Item Response Theory Analysis<div class="btn-hub-desc">Item parameters, category response curves, and test information</div></button>';
   html+='<button class="btn-hub" id="btnGoCFA">Confirmatory Factor Analysis<div class="btn-hub-desc">Model fit, factor loadings, reliability</div></button>';
   html+='<div class="psy-hub-text">';
-  html+='<p>The sample referenced is a volunteer online sample who responded to posts requesting people take a personality inventory. Items were written to capture several conceptualisations of psychopathy, including traits pertaining to boldness as well as criminal behaviour. Several iterations of the scale were developed across three successive rounds of item writing, using a self-correcting inductive-hypothetico-deductive spiral (Cattell, 1950). The result is a preliminary 4-factor model that includes no reference to criminal history except as a downstream consequence of an innate personality disposition toward externalised aggression, as well as retaining items tapping glibness, superficial charm and social potency, which are currently scarcely represented in extant PCL-based self-report scales. </p>';
+  html+='<p>Several iterations of the scale were developed across three successive rounds of item writing, using a self-correcting inductive-hypothetico-deductive spiral (Cattell, 1950). The result is a preliminary 4-factor model that includes no reference to criminal history except as a downstream consequence of an innate personality disposition toward externalised aggression, as well as retaining items tapping glibness, superficial charm and social potency, which are currently scarcely represented in extant PCL-based self-report scales. The sample referenced here is an online sample (N=650) who responded to posts requesting volunteers to take a personality inventory.</p>';
   html+='</div>';
   html+='<button class="btn-back-bottom" id="btnBackToCompare">\u2190 Back to comparison</button>';
   html+='</div>';
@@ -763,7 +771,7 @@ function renderCFA(){
   // Tabbed view: hierarchical (default) and correlated 4-factor models
   var html='<div class="psy-page">';
   html+='<h1>Confirmatory Factor Analysis</h1>';
-  html+='<p class="psy-note" style="text-align:center"><em>N = 650 \u00b7 Estimator: WLSMV</em></p>';
+  html+='<p class="psy-note" style="text-align:center"><em>N = 650</em></p>';
 
   // Tab buttons
   html+='<div class="cfa-tabs">';
@@ -837,8 +845,8 @@ function renderCFA(){
 
   // ===== CORRELATED view =====
   html+='<div class="cfa-view" id="cfaViewCorr">';
-  html+='<p class="psy-note"><strong>Correlated-factors model</strong><br>27 items \u2192 4 factors with pairwise covariances freely estimated.</p>';
-  html+='<p class="cfa-estimator-note">Estimator: WLSMV</p>';
+  html+='<p class="psy-note"><strong>Correlated-factors model</strong><br>27 items \u2192 4 factors with pairwise covariances freely estimated.<br>Estimator: WLSMV</p>';
+  html+='<p class="cfa-estimator-note"></p>';
 
   // ----- Correlated factors path diagram -----
   html+='<div class="cfa-diagram-card">';
@@ -952,26 +960,28 @@ function buildHierDiagramSVG(){
 }
 
 function buildCorrDiagramSVG(){
-  // Correlated four-factor: square layout
-  // Top-left: F1 (Interpersonal Style); Top-right: F3 (Lifestyle)
-  // Bottom-left: F2 (Affective); Bottom-right: F4 (Antisocial)
+  // Correlated four-factor: square layout in factor order F1-F2-F3-F4
+  // Top-left  (1): F1 Charming/Deceitful
+  // Top-right (2): F2 Deficient Affective Experience
+  // Bottom-left  (3): F3 Impulsive/Aimless Lifestyle
+  // Bottom-right (4): F4 Reactive Aggression
   // Covariances:
-  // F1<->F3 = 0.358 (top edge)
-  // F3<->F4 = 0.412 (right edge)
-  // F2<->F4 = 0.314 (bottom edge)
-  // F1<->F2 = 0.340 (left edge)
-  // F1<->F4 = 0.270 (diagonal TL-BR)
-  // F2<->F3 = 0.399 (diagonal BL-TR)
+  // F1<->F2 = 0.369 (top edge)
+  // F2<->F4 = 0.315 (right edge)
+  // F3<->F4 = 0.413 (bottom edge)
+  // F1<->F3 = 0.379 (left edge)
+  // F1<->F4 = 0.292 (diagonal TL-BR)
+  // F2<->F3 = 0.398 (diagonal TR-BL)
   var W=700,H=560;
   var svg='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="font-family:var(--body),sans-serif">';
   svg+='<defs><marker id="arrCstart" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#A78BFA"/></marker><marker id="arrCend" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A78BFA"/></marker></defs>';
   // Bubble dimensions
   var rx=110,ry=46;
   // Centres for square layout
-  var TLx=170,TLy=110;   // top-left  : F1 Charming/Deceitful
-  var TRx=530,TRy=110;   // top-right : F3 Lifestyle
-  var BLx=170,BLy=440;   // bottom-left: F2 Affective
-  var BRx=530,BRy=440;   // bottom-right: F4 Antisocial
+  var TLx=170,TLy=110;   // top-left   (1): F1 Charming/Deceitful
+  var TRx=530,TRy=110;   // top-right  (2): F2 Affective
+  var BLx=170,BLy=440;   // bottom-left  (3): F3 Lifestyle
+  var BRx=530,BRy=440;   // bottom-right (4): F4 Aggression
   // Helper to draw a bubble
   function bubble(cx,cy,line1,line2){
     var s='<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="rgba(155,141,255,0.12)" stroke="#9B8BFF" stroke-width="1.5"/>';
@@ -987,32 +997,38 @@ function buildCorrDiagramSVG(){
     var s=1/Math.sqrt((dx*dx)/(rx*rx)+(dy*dy)/(ry*ry));
     return {x:cx+dx*s,y:cy+dy*s};
   }
-  function doubleArrow(c1x,c1y,c2x,c2y,label,labelOffsetX,labelOffsetY){
+  // doubleArrow: draws a double-headed connector with a label.
+  // Optional `t` (0..1) positions the label along the line; default 0.5 = midpoint.
+  // Lower `t` puts the label closer to (c1x,c1y) — used to lift diagonal labels off the
+  // intersection point so it's clear which covariance belongs to which line.
+  function doubleArrow(c1x,c1y,c2x,c2y,label,labelOffsetX,labelOffsetY,t){
     var p1=ellipsePoint(c1x,c1y,c2x,c2y);
     var p2=ellipsePoint(c2x,c2y,c1x,c1y);
-    // small inset so arrowheads sit on perimeter
     var s='<line x1="'+p1.x.toFixed(1)+'" y1="'+p1.y.toFixed(1)+'" x2="'+p2.x.toFixed(1)+'" y2="'+p2.y.toFixed(1)+'" stroke="#A78BFA" stroke-width="1.5" marker-start="url(#arrCstart)" marker-end="url(#arrCend)"/>';
-    var mx=(p1.x+p2.x)/2+(labelOffsetX||0);
-    var my=(p1.y+p2.y)/2+(labelOffsetY||0);
+    var tt=(t==null)?0.5:t;
+    var mx=p1.x+(p2.x-p1.x)*tt+(labelOffsetX||0);
+    var my=p1.y+(p2.y-p1.y)*tt+(labelOffsetY||0);
     s+='<rect x="'+(mx-22)+'" y="'+(my-11)+'" width="44" height="18" fill="#131929" stroke="rgba(167,139,250,.4)" stroke-width="1" rx="4"/>';
     s+='<text x="'+mx+'" y="'+(my+3)+'" text-anchor="middle" font-size="12" font-weight="600" fill="#E8B860">'+label+'</text>';
     return s;
   }
   // Draw diagonals first (so they sit behind bubbles in z order)
-  svg+=doubleArrow(TLx,TLy,BRx,BRy,'0.292',-30,0);  // F1 <-> F4
-  svg+=doubleArrow(BLx,BLy,TRx,TRy,'0.398',30,0);   // F2 <-> F3
+  // Place each diagonal label ~32% along its line, off the centre intersection,
+  // so it's unambiguously attached to the correct line.
+  svg+=doubleArrow(TLx,TLy,BRx,BRy,'0.292',0,0,0.32);  // F1 <-> F4 — label sits upper-left of crossing
+  svg+=doubleArrow(TRx,TRy,BLx,BLy,'0.398',0,0,0.32);  // F2 <-> F3 — label sits upper-right of crossing
   // Edges
-  svg+=doubleArrow(TLx,TLy,TRx,TRy,'0.379',0,-12);  // F1 <-> F3 (top)
-  svg+=doubleArrow(TRx,TRy,BRx,BRy,'0.413',12,0);   // F3 <-> F4 (right)
-  svg+=doubleArrow(BLx,BLy,BRx,BRy,'0.315',0,12);   // F2 <-> F4 (bottom)
-  svg+=doubleArrow(TLx,TLy,BLx,BLy,'0.369',-12,0);  // F1 <-> F2 (left)
+  svg+=doubleArrow(TLx,TLy,TRx,TRy,'0.369',0,-12);  // F1 <-> F2 (top)
+  svg+=doubleArrow(TRx,TRy,BRx,BRy,'0.315',12,0);   // F2 <-> F4 (right)
+  svg+=doubleArrow(BLx,BLy,BRx,BRy,'0.413',0,12);   // F3 <-> F4 (bottom)
+  svg+=doubleArrow(TLx,TLy,BLx,BLy,'0.379',-12,0);  // F1 <-> F3 (left)
   // Bubbles on top
   svg+=bubble(TLx,TLy,'Charming &amp;','Deceitful');
-  svg+=bubble(TRx,TRy,'Impulsive,','Aimless Lifestyle');
-  svg+=bubble(BLx,BLy,'Deficient','Affective Exp.');
+  svg+=bubble(TRx,TRy,'Deficient','Affective Exp.');
+  svg+=bubble(BLx,BLy,'Impulsive,','Aimless Lifestyle');
   svg+=bubble(BRx,BRy,'Reactive','Aggression');
   // Footnote
-  svg+='<text x="'+(W/2)+'" y="'+(H-14)+'" text-anchor="middle" font-size="11" fill="rgba(180,175,210,0.7)" font-style="italic">Standardised factor covariances shown on each path. Estimator: WLSMV.</text>';
+  svg+='<text x="'+(W/2)+'" y="'+(H-14)+'" text-anchor="middle" font-size="11" fill="rgba(180,175,210,0.7)" font-style="italic">Standardised factor covariances shown on each path.</text>';
   svg+='</svg>';
   return svg;
 }
